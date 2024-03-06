@@ -1,7 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from '../layouts/BaseLayout.astro';
-import BlogPost from '../components/BlogPost.astro';
+import { Card } from 'accessible-astro-components'
+
 
 const pageTitle = "Blog";
 const allPosts = await getCollection("posts");
@@ -9,11 +10,34 @@ const allPosts = await getCollection("posts");
 
 <BaseLayout pageTitle={pageTitle}>
     <p>This is where I will post about my journey learning Astro.</p>
-    <ul>
-        {
-            allPosts.map((post) => (
-              <BlogPost url={`/posts/${post.slug}/`} title={post.data.title} />
-            ))
-          }
-    </ul>
+
+    <ul class="cards">
+      {
+          allPosts.map((post) => (
+            <li>
+            <Card url={`/posts/${post.slug}/`} title={post.data.title} img={post.data.image.url} footer="">
+              {post.data.description}
+              </Card></li>
+          ))
+        }
+  </ul>
 </BaseLayout>
+
+<style>
+  ul.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+    list-style: none;
+    padding-inline-start: 0;
+
+    @media (min-width: 550px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+    }
+
+    @media (min-width: 950px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
