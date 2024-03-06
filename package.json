@@ -14,5 +14,8 @@
     "@astrojs/rss": "^4.0.5",
     "astro": "^4.4.11",
     "preact": "^10.19.6"
+  },
+  "devDependencies": {
+    "accessible-astro-components": "^2.3.5"
   }
 }
