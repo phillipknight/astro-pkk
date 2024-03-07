@@ -8,13 +8,10 @@ I'm rebuilding my personal professional [website](https://www.phillipkentknight.
 
 This project is currently in development; This project will likely not have an end point but my plan is to quickly launch an MVP to replace my previous site. 
 
-## Process
+## Development 
 
-[x] Initial scaffolding for this project was accomplished by following the official Astro tutorial ["Build a Blog"](https://docs.astro.build/en/tutorial/0-introduction/), which begins with "Astro Starter Kit: Minimal" and includes great modules to help understand the various basic concepts for building with Astro. 
-[x] Version control is managed in *this* GitHub repository.
-[x] Builds are hosted and continuous deployment is managed by Netlify. 
-[x] Some components have been imported from [Accessible Astro Components](https://github.com/markteekman/accessible-astro-components)
-[] Navigation and content development
-[] Componentize SEO & social metadata for posts and pages
-[] Creation of default styles for individual components 
-[] Implementation of a CMS (to scale beyond file-based markdown publishing)
+- Initial scaffolding for this project was accomplished by following the official Astro tutorial ["Build a Blog"](https://docs.astro.build/en/tutorial/0-introduction/), which begins with "Astro Starter Kit: Minimal" and includes great modules to help understand the various basic concepts for building with Astro. 
+- Version control is managed in *this* GitHub repository.
+- Builds are hosted and continuous deployment is managed by Netlify. 
+- Some components have been imported from [Accessible Astro Components](https://github.com/markteekman/accessible-astro-components)
+
