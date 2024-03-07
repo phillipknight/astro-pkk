@@ -1,47 +1,20 @@
-# Astro Starter Kit: Minimal
+# A new adventure with Astro
 
-```sh
-npm create astro@latest -- --template minimal
-```
+I'm rebuilding my personal professional [website](https://www.phillipkentknight.com), and along the way I'm learning to develop web applications with Astro. 
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Current Status 
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f3651fa6-0509-4dfd-b7ed-7413bb7ba1dc/deploy-status)](https://app.netlify.com/sites/pkk-astro/deploys)
 
-## 🚀 Project Structure
+This project is currently in development; This project will likely not have an end point but my plan is to quickly launch an MVP to replace my previous site. 
 
-Inside of your Astro project, you'll see the following folders and files:
+## Process
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+[x] Initial scaffolding for this project was accomplished by following the official Astro tutorial ["Build a Blog"](https://docs.astro.build/en/tutorial/0-introduction/), which begins with "Astro Starter Kit: Minimal" and includes great modules to help understand the various basic concepts for building with Astro. 
+[x] Version control is managed in *this* GitHub repository.
+[x] Builds are hosted and continuous deployment is managed by Netlify. 
+[x] Some components have been imported from [Accessible Astro Components](https://github.com/markteekman/accessible-astro-components)
+[] Navigation and content development
+[] Componentize SEO & social metadata for posts and pages
+[] Creation of default styles for individual components 
+[] Implementation of a CMS (to scale beyond file-based markdown publishing)
