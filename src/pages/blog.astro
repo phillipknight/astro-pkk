@@ -1,28 +1,32 @@
 ---
 import { getCollection } from "astro:content";
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { Card } from 'accessible-astro-components'
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Card } from "accessible-astro-components";
 
 const pageTitle = "Blog";
 const allPosts = await getCollection("posts");
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <p>Articles and Posts</p>
+  <p>Articles and Posts</p>
 
-    <ul class="cards">
-      {
-          allPosts.map((post) => (
-            <li>
-            <Card url={`/posts/${post.slug}/`} title={post.data.title} img={post.data.image.url} footer="">
-              {post.data.description}
-              </Card></li>
-          ))
-        }
+  <ul class="cards">
+    {
+      allPosts.map((post) => (
+        <li>
+          <Card
+            url={`/posts/${post.slug}/`}
+            title={post.data.title}
+            img={post.data.image.url}
+            footer=""
+          >
+            {post.data.description}
+          </Card>
+        </li>
+      ))
+    }
   </ul>
   <a href="/tags">All tags</a>
-
 </BaseLayout>
 
 <style>
