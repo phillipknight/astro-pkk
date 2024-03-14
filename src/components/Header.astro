@@ -1,14 +1,14 @@
 ---
 import Navigation from "./Navigation.astro";
-import Hamburger from "./Hamburger.astro";
 import { SkipLinks } from 'accessible-astro-components';
 ---
 <header>
-<SkipLinks />
-    <nav>
-
-        <Hamburger />
-        <Navigation />
-      
-    </nav>
+    <SkipLinks />
+    <Navigation />
 </header>
+
+<style>
+    header {
+        max-width: 100%;
+    }
+</style>
