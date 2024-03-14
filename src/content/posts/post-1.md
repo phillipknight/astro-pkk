@@ -1,23 +1,48 @@
 ---
-title: 'My First Blog Post'
-pubDate: 2022-07-01
-description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
+title: 'I asked ChatGPT to tell me why people like working with me'
+pubDate: 2024-02-27
+description: "It's difficult for me to think of myself as a product, but that's really what job seeking is. In this article, I describe how I tried using AI to analyze quotes from professional feedback as if they were Amazon customer reviews - for the product that is me."
 image:
-    url: 'https://docs.astro.build/assets/full-logo-light.png'
+    url: 'https://media.licdn.com/dms/image/D4D12AQH-WTrVLCtMRA/article-cover_image-shrink_720_1280/0/1709047417673?e=1715817600&v=beta&t=kgiwNNdWxzwpItBpcWHQpzyVWBTY2ZsBvuephgdOnEM'
     alt: 'The full Astro logo.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
+About to leave my job and struggling to find the words to update my resume, I decided to read through all of the 360 degree employee reviews I received over the last half-decade. Re-reading from the perspective of the end, I found new value in these old reviews.
 
-## What I've accomplished
+I was reminded of tons of big wins, to add to my list of accomplishments, including many I forgot about while distracted by all the work remaining to be done. But what really struck me was the consistent confidence and appreciation in how both management and peers described me. It wasn't just the results of projects, my colleagues were describing how they felt about working with me - day after day, year after year.
 
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
+**I realized this was a resource filled with great examples of how other people have described me and my work.** And, I needed a way to evaluate this data free from the filter of my own feelings. 
 
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
+**Building on this, I began experimenting with a nifty little AI hack.**
 
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
+1. **I started with a list of quotes from my positive reviews.**
 
-## What's next
+2. **I (minimally) cleaned up anything that required context/wouldn't make sense on its own.** For example, clarifying words like "development" which may have many different meanings in my work.
+
+3. **I went to ChatGPT and provided the prompt:** "In the following message, I will send you several quotes that are all about a person named Phil. After I send them, can you please tell me what you know about Phil?"
+
+4. **I provided a list of quotes, and ChatGPT gave me a summary. It also output a list of attributes and qualities it learned about me** - with citations for the knowledge, for example: *"Innovative Thinking: Phil is known for challenging the team to think beyond visual aesthetics, encouraging consideration of how products will work and be used by all users. He also contributes ideas about new tactics and technologies, with a strong focus on accessibility and usability."*
+
+Now, I have some great examples of points I want to highlight about myself in application materials and interviews, especially with regard to soft skills - and I have a clearer sense of the language others might use or be looking for when describing my work. 
+
+## What did my reviews have to say about me, according to ChatGPT?
 
 I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+
+>In summary, Phil appears to be a well-rounded team member with expertise in accessibility, a strong focus on user needs, a passion for digital activism, excellent development skills, and a supportive and collaborative approach to working with the team. There is also a recognition of his analytical thinking and contribution to project improvement.
+
+## Attributes identified by ChatGPT 
+
+1. Expertise in Accessibility
+2. User-Centric Approach
+3. Digital Activism and Campaigning
+4. Innovative Thinking
+5. Development Skills
+6. Transparency and Collaboration
+7. Technical Knowledge
+8. Supportive and Inclusive
+9. Analytical Thinking
+10. Effective Facilitator
+11. Adaptability
+12. Collaborative and Fun to Work With
+13. Contribution to Learning 
