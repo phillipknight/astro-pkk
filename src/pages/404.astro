@@ -1,0 +1,108 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+    <div class="colorbars">
+    <div class="container404">
+    <h1>Well, shit...<br>something's gone wrong</h1>
+    <p>Your request returned a 404 - Page Not Found error</p>
+  </div>
+</div>
+</BaseLayout>
+<style>
+  .colorbars {
+    display: grid;
+    place-content: center;
+
+  width: 85vw;
+  max-width:100%;
+
+  height: 85vh;
+  max-height:100%;
+
+
+  background: -webkit-gradient(
+      linear,
+      0% 50%,
+      100% 50%,
+      color-stop(0%, #c0c0c0),
+      color-stop(14.28571%, #c0c0c0),
+      color-stop(14.28571%, #c0c004),
+      color-stop(28.57143%, #c0c004),
+      color-stop(28.57143%, #3fc0c0),
+      color-stop(42.85714%, #3fc0c0),
+      color-stop(42.85714%, #35c000),
+      color-stop(57.14286%, #35c000),
+      color-stop(57.14286%, #c002c0),
+      color-stop(71.42857%, #c002c0),
+      color-stop(71.42857%, #c00000),
+      color-stop(85.71429%, #c00000),
+      color-stop(85.71429%, #1e00c0),
+      color-stop(100%, #1e00c0)
+    ); 
+    background: -moz-linear-gradient(
+      left,
+      #c0c0c0 0%,
+      #c0c0c0 14.28571%,
+      #c0c004 14.28571%,
+      #c0c004 28.57143%,
+      #3fc0c0 28.57143%,
+      #3fc0c0 42.85714%,
+      #35c000 42.85714%,
+      #35c000 57.14286%,
+      #c002c0 57.14286%,
+      #c002c0 71.42857%,
+      #c00000 71.42857%,
+      #c00000 85.71429%,
+      #1e00c0 85.71429%,
+      #1e00c0 100%
+    );
+    background: -webkit-linear-gradient(
+      left,
+      #c0c0c0 0%,
+      #c0c0c0 14.28571%,
+      #c0c004 14.28571%,
+      #c0c004 28.57143%,
+      #3fc0c0 28.57143%,
+      #3fc0c0 42.85714%,
+      #35c000 42.85714%,
+      #35c000 57.14286%,
+      #c002c0 57.14286%,
+      #c002c0 71.42857%,
+      #c00000 71.42857%,
+      #c00000 85.71429%,
+      #1e00c0 85.71429%,
+      #1e00c0 100%
+    );
+    background: linear-gradient(
+      to right,
+      #c0c0c0 0%,
+      #c0c0c0 14.28571%,
+      #c0c004 14.28571%,
+      #c0c004 28.57143%,
+      #3fc0c0 28.57143%,
+      #3fc0c0 42.85714%,
+      #35c000 42.85714%,
+      #35c000 57.14286%,
+      #c002c0 57.14286%,
+      #c002c0 71.42857%,
+      #c00000 71.42857%,
+      #c00000 85.71429%,
+      #1e00c0 85.71429%,
+      #1e00c0 100%
+    );
+    background-origin: border-box;
+
+    border-radius: 5%;
+  }
+
+  .container404 {
+    color: #fff;
+    background: black;
+    padding: 1rem;
+    font-family: monospace;
+  }
+
+
+</style>
