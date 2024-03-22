@@ -3,106 +3,286 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-    <div class="colorbars">
-    <div class="container404">
-    <h1>Technical Difficulties</h1>
-    <p>Well, shit... something went wrong.</p><p>Your request returned a 404 - Page Not Found error</p>
+  <div class="outer-container">
+    <div class="inner-container colorbars">
+      <div class="content">
+        <h1>No Signal</h1>
+        <p><strong>404 - Page Not Found</strong></p>
+      </div>
+    </div>
+    <div class="castellations"></div>
+    <div class="blackbars"></div>
   </div>
-</div>
 </BaseLayout>
 <style>
+  :root {
+    --gray-40: #666666;
+    --white-75: #bfbfbf;
+    --yellow-75: #bfbf00;
+    --cyan-75: #00bfbe;
+    --green-75: #00bf00;
+    --magenta-75: #bf00c0;
+    --red-75: #bf0001;
+    --blue-75: #0000bf;
+    --black-75: #000000;
+    --white: #ffffff;
+    --black: #000000;
+  }
+
+  @media (color-gamut: p3) {
+    :root {
+      --gray-40: color(display-p3 0.4 0.4 0.4 / 1);
+      --white-75: color(display-p3 0.74902 0.74902 0.74902 / 1);
+      --yellow-75: color(display-p3 0.74902 0.74902 0 / 1);
+      --cyan-75: color(display-p3 0 0.74902 0.745098 / 1);
+      --green-75: color(display-p3 0 0.74902 0 / 1);
+      --magenta-75: color(display-p3 0.74902 0 0.752941 / 1);
+      --red-75: color(display-p3 0.74902 0 0.003922 / 1);
+      --blue-75: color(display-p3 0 0 0.74902 / 1);
+      --black-75: color(display-p3 0 0 0 / 1);
+      --white: color(display-p3 1 1 1 / 1);
+    }
+  }
+
   .colorbars {
-    display: grid;
-    place-content: center;
-
-  width: 99vw;
-  height: 85vh;
-  max-width: 100%;
-  max-height:100%;
-
-
-  background: -webkit-gradient(
+    background: -webkit-gradient(
       linear,
       0% 50%,
       100% 50%,
-      color-stop(0%, #c0c0c0),
-      color-stop(14.28571%, #c0c0c0),
-      color-stop(14.28571%, #c0c004),
-      color-stop(28.57143%, #c0c004),
-      color-stop(28.57143%, #3fc0c0),
-      color-stop(42.85714%, #3fc0c0),
-      color-stop(42.85714%, #35c000),
-      color-stop(57.14286%, #35c000),
-      color-stop(57.14286%, #c002c0),
-      color-stop(71.42857%, #c002c0),
-      color-stop(71.42857%, #c00000),
-      color-stop(85.71429%, #c00000),
-      color-stop(85.71429%, #1e00c0),
-      color-stop(100%, #1e00c0)
-    ); 
+      color-stop(0%, var(--white-75)),
+      color-stop(14.28571%, var(--white-75)),
+      color-stop(14.28571%, var(--yellow-75)),
+      color-stop(28.57143%, var(--yellow-75)),
+      color-stop(28.57143%, var(--cyan-75)),
+      color-stop(42.85714%, var(--cyan-75)),
+      color-stop(42.85714%, var(--green-75)),
+      color-stop(57.14286%, var(--green-75)),
+      color-stop(57.14286%, var(--magenta-75)),
+      color-stop(71.42857%, var(--magenta-75)),
+      color-stop(71.42857%, var(--red-75)),
+      color-stop(85.71429%, var(--red-75)),
+      color-stop(85.71429%, var(--blue-75)),
+      color-stop(100%, var(--blue-75))
+    );
     background: -moz-linear-gradient(
       left,
-      #c0c0c0 0%,
-      #c0c0c0 14.28571%,
-      #c0c004 14.28571%,
-      #c0c004 28.57143%,
-      #3fc0c0 28.57143%,
-      #3fc0c0 42.85714%,
-      #35c000 42.85714%,
-      #35c000 57.14286%,
-      #c002c0 57.14286%,
-      #c002c0 71.42857%,
-      #c00000 71.42857%,
-      #c00000 85.71429%,
-      #1e00c0 85.71429%,
-      #1e00c0 100%
+      var(--white-75) 0%,
+      var(--white-75) 14.28571%,
+      var(--yellow-75) 14.28571%,
+      var(--yellow-75) 28.57143%,
+      var(--cyan-75) 28.57143%,
+      var(--cyan-75) 42.85714%,
+      var(--green-75) 42.85714%,
+      var(--green-75) 57.14286%,
+      var(--magenta-75) 57.14286%,
+      var(--magenta-75) 71.42857%,
+      var(--red-75) 71.42857%,
+      var(--red-75) 85.71429%,
+      var(--blue-75) 85.71429%,
+      var(--blue-75) 100%
     );
     background: -webkit-linear-gradient(
       left,
-      #c0c0c0 0%,
-      #c0c0c0 14.28571%,
-      #c0c004 14.28571%,
-      #c0c004 28.57143%,
-      #3fc0c0 28.57143%,
-      #3fc0c0 42.85714%,
-      #35c000 42.85714%,
-      #35c000 57.14286%,
-      #c002c0 57.14286%,
-      #c002c0 71.42857%,
-      #c00000 71.42857%,
-      #c00000 85.71429%,
-      #1e00c0 85.71429%,
-      #1e00c0 100%
+      var(--white-75) 0%,
+      var(--white-75) 14.28571%,
+      var(--yellow-75) 14.28571%,
+      var(--yellow-75) 28.57143%,
+      var(--cyan-75) 28.57143%,
+      var(--cyan-75) 42.85714%,
+      var(--green-75) 42.85714%,
+      var(--green-75) 57.14286%,
+      var(--magenta-75) 57.14286%,
+      var(--magenta-75) 71.42857%,
+      var(--red-75) 71.42857%,
+      var(--red-75) 85.71429%,
+      var(--blue-75) 85.71429%,
+      var(--blue-75) 100%
     );
     background: linear-gradient(
       to right,
-      #c0c0c0 0%,
-      #c0c0c0 14.28571%,
-      #c0c004 14.28571%,
-      #c0c004 28.57143%,
-      #3fc0c0 28.57143%,
-      #3fc0c0 42.85714%,
-      #35c000 42.85714%,
-      #35c000 57.14286%,
-      #c002c0 57.14286%,
-      #c002c0 71.42857%,
-      #c00000 71.42857%,
-      #c00000 85.71429%,
-      #1e00c0 85.71429%,
-      #1e00c0 100%
+      var(--white-75) 0%,
+      var(--white-75) 14.28571%,
+      var(--yellow-75) 14.28571%,
+      var(--yellow-75) 28.57143%,
+      var(--cyan-75) 28.57143%,
+      var(--cyan-75) 42.85714%,
+      var(--green-75) 42.85714%,
+      var(--green-75) 57.14286%,
+      var(--magenta-75) 57.14286%,
+      var(--magenta-75) 71.42857%,
+      var(--red-75) 71.42857%,
+      var(--red-75) 85.71429%,
+      var(--blue-75) 85.71429%,
+      var(--blue-75) 100%
     );
     background-origin: border-box;
-
-    border-radius: 2em;
   }
 
-  .container404 {
-    color: #fff;
-    background: black;
-    padding: 1rem;
+  .castellations {
+    background: -webkit-gradient(
+      linear,
+      0% 50%,
+      100% 50%,
+      color-stop(0%, var(--blue-75)),
+      color-stop(14.28571%, var(--blue-75)),
+      color-stop(14.28571%, var(--black-75)),
+      color-stop(28.57143%, var(--black-75)),
+      color-stop(28.57143%, var(--magenta-75)),
+      color-stop(42.85714%, var(--magenta-75)),
+      color-stop(42.85714%, var(--black-75)),
+      color-stop(57.14286%, var(--black-75)),
+      color-stop(57.14286%, var(--cyan-75)),
+      color-stop(71.42857%, var(--cyan-75)),
+      color-stop(71.42857%, var(--black-75)),
+      color-stop(85.71429%, var(--black-75)),
+      color-stop(85.71429%, var(--white-75)),
+      color-stop(100%, var(--white-75))
+    );
+    background: -moz-linear-gradient(
+      left,
+      var(--blue-75) 0%,
+      var(--blue-75) 14.28571%,
+      var(--black-75) 14.28571%,
+      var(--black-75) 28.57143%,
+      var(--magenta-75) 28.57143%,
+      var(--magenta-75) 42.85714%,
+      var(--black-75) 42.85714%,
+      var(--black-75) 57.14286%,
+      var(--cyan-75) 57.14286%,
+      var(--cyan-75) 71.42857%,
+      var(--black-75) 71.42857%,
+      var(--black-75) 85.71429%,
+      var(--white-75) 85.71429%,
+      var(--white-75) 100%
+    );
+    background: -webkit-linear-gradient(
+      left,
+      var(--blue-75) 0%,
+      var(--blue-75) 14.28571%,
+      var(--black-75) 14.28571%,
+      var(--black-75) 28.57143%,
+      var(--magenta-75) 28.57143%,
+      var(--magenta-75) 42.85714%,
+      var(--black-75) 42.85714%,
+      var(--black-75) 57.14286%,
+      var(--cyan-75) 57.14286%,
+      var(--cyan-75) 71.42857%,
+      var(--black-75) 71.42857%,
+      var(--black-75) 85.71429%,
+      var(--white-75) 85.71429%,
+      var(--white-75) 100%
+    );
+    background: linear-gradient(
+      to right,
+      var(--blue-75) 0%,
+      var(--blue-75) 14.28571%,
+      var(--black-75) 14.28571%,
+      var(--black-75) 28.57143%,
+      var(--magenta-75) 28.57143%,
+      var(--magenta-75) 42.85714%,
+      var(--black-75) 42.85714%,
+      var(--black-75) 57.14286%,
+      var(--cyan-75) 57.14286%,
+      var(--cyan-75) 71.42857%,
+      var(--black-75) 71.42857%,
+      var(--black-75) 85.71429%,
+      var(--white-75) 85.71429%,
+      var(--white-75) 100%
+    );
+    background-origin: border-box;
+  }
+
+  .blackbars {
+    background: -webkit-gradient(
+      linear,
+      0% 50%,
+      100% 50%,
+      color-stop(0%, var(--black-75)),
+      color-stop(16.66666%, var(--black-75)),
+      color-stop(16.66666%, var(--white)),
+      color-stop(33.33333%, var(--white)),
+      color-stop(33.33333%, var(--black-75)),
+      color-stop(50%, var(--black-75)),
+      color-stop(50%, var(--black)),
+      color-stop(66.66666%, var(--black)),
+      color-stop(66.66666%, var(--black-75)),
+      color-stop(83.33333%, var(--black-75)),
+      color-stop(83.33333%, var(--black-75)),
+      color-stop(100%, var(--black-75))
+    );
+    background: -moz-linear-gradient(
+      left,
+      var(--black-75) 0%,
+      var(--black-75) 16.66666%,
+      var(--white) 16.66666%,
+      var(--white) 33.33333%,
+      var(--black-75) 33.33333%,
+      var(--black-75) 50%,
+      var(--black) 50%,
+      var(--black) 66.66666%,
+      var(--black-75) 66.66666%,
+      var(--black-75) 83.33333%,
+      var(--black-75) 83.33333%,
+      var(--black-75) 100%
+    );
+    background: -webkit-linear-gradient(
+      left,
+      var(--black-75) 0%,
+      var(--black-75) 16.66666%,
+      var(--white) 16.66666%,
+      var(--white) 33.33333%,
+      var(--black-75) 33.33333%,
+      var(--black-75) 50%,
+      var(--black) 50%,
+      var(--black) 66.66666%,
+      var(--black-75) 66.66666%,
+      var(--black-75) 83.33333%,
+      var(--black-75) 83.33333%,
+      var(--black-75) 100%
+    );
+    background: linear-gradient(
+      to right,
+      var(--black-75) 0%,
+      var(--black-75) 16.66666%,
+      var(--white) 16.66666%,
+      var(--white) 33.33333%,
+      var(--black-75) 33.33333%,
+      var(--black-75) 50%,
+      var(--black) 50%,
+      var(--black) 66.66666%,
+      var(--black-75) 66.66666%,
+      var(--black-75) 83.33333%,
+      var(--black-75) 83.33333%,
+      var(--black-75) 100%
+    );
+    background-origin: border-box;
+  }
+
+  .outer-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 6fr 1fr 2fr;
+  }
+
+  .inner-container {
+    display: grid;
+    justify-items: stretch;
+    align-items: center;
+  }
+
+  .content {
+    align-self: center;
+    display: grid;
+    justify-content: center;
+
     font-family: monospace;
-    max-width: 100%;
+    text-transform: uppercase;
+    color: white;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
   }
-
-
 </style>
