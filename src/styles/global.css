@@ -33,9 +33,12 @@ body {
     min(65ch, 100%)
     1fr;
 }
-.wrapper > * {
+.wrapper > *:not(.full-bleed) {
   grid-column: 2;
+  padding-inline: 1rem;
 }
+
+
 .full-bleed {
   width: 100%;
   grid-column: 1 / 4;
