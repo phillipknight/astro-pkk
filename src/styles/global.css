@@ -14,13 +14,15 @@
   3. Add accessible line-height
   4. Improve text rendering */
 body {
-  line-height: 1.5;
+   line-height: 1.5; 
   -webkit-font-smoothing: antialiased;
 } 
-/* less line height for headings */
+/* 
+less line height for headings 
 h1,h2,h3,h4,h5,h6 {
   line-height: 1.25;
-}
+} 
+*/
 /* 5. Improve media defaults */
 img,
 picture,
@@ -46,6 +48,11 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+/* blanket line height */
+* {
+  line-height: calc(1em + 0.5rem);
 }
 
 /* Accessibility utility */

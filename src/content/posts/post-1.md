@@ -27,8 +27,6 @@ Now, I have some great examples of points I want to highlight about myself in ap
 
 ## What did my reviews have to say about me, according to ChatGPT?
 
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
-
 >In summary, Phil appears to be a well-rounded team member with expertise in accessibility, a strong focus on user needs, a passion for digital activism, excellent development skills, and a supportive and collaborative approach to working with the team. There is also a recognition of his analytical thinking and contribution to project improvement.
 
 ## Attributes identified by ChatGPT 
