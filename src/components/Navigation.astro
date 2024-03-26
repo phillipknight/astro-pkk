@@ -7,8 +7,8 @@
   <ul class="nav navbar-nav">
     {
       Astro.url.pathname != "/" && (
-        <li class="nav-item logo">
-          <a class="nav-link" href="/">
+        <li class="logo">
+          <a href="/">
             Phillip Kent Knight
           </a>
         </li>
@@ -36,8 +36,18 @@
 
   li.logo {
     margin-right: auto;
+    
   }
-
+  .logo:focus-within, .logo:hover {
+    font-style: italic;
+  }
+  .logo > * {
+    padding: 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--main-color, #000000);
+  }
   .nav-item {
     display: flex;
     transition: all 0.5s ease-out;
@@ -55,7 +65,7 @@
     text-decoration: none;
     outline-offset: 0.25rem;
     outline-style: thick;
-    color: black;
+    color: var(--main-color, #000000);
     text-transform: lowercase;
   }
 </style>
