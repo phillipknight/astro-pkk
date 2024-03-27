@@ -1,8 +1,10 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/global.css";
----
+import MinimalLayout from "../layouts/MinimalLayout.astro";
 
+const pageTitle = "Page Not Found";
+---
+<MinimalLayout pageTitle={pageTitle}>
 <div class="outer-container full-bleed">
   <div class="inner-container colorbars">
     <div class="content">
@@ -16,6 +18,7 @@ import "../styles/global.css";
   <div class="castellations"></div>
   <div class="blackbars"></div>
 </div>
+</MinimalLayout>
 <style>
   :root {
     --gray-40: #666666;
