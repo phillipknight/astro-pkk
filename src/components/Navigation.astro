@@ -1,5 +1,5 @@
 ---
-
+const pathname = new URL(Astro.request.url).pathname;
 ---
 
 <nav class="navbar" aria-label="Main Menu">
@@ -15,10 +15,10 @@
       )
     }
     <li class="nav-item">
-      <a class="nav-link" href="/about/">About</a>
+      <a class={pathname === "/about/" ? "nav-link active" : "nav-link"} href="/about/">About</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/blog/">Blog</a>
+      <a class={pathname === "/blog/" ? "nav-link active" : "nav-link"}" href="/blog/">Blog</a>
     </li>
   </ul>
 </nav>
@@ -54,9 +54,11 @@
   }
 
   .nav-item:focus-within,
-  .nav-item:hover {
+  .nav-item:hover{
     box-shadow: inset 2px 2px 1px #000000bb;
   }
+
+
 
   .nav-link {
     padding: 0.5rem;
