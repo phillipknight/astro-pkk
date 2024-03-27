@@ -1,19 +1,21 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
 ---
 
-<BaseLayout>
-  <div class="outer-container full-bleed">
-    <div class="inner-container colorbars">
-      <div class="content">
-        <h1>No Signal</h1>
-        <p><strong>404 - Page Not Found</strong></p>
-      </div>
+<div class="outer-container full-bleed">
+  <div class="inner-container colorbars">
+    <div class="content">
+      <h1>404 - Page Not Found</h1>
+      <p>Well, shit... Something's gone wrong.</p>
+      <nav class="notfound-nav">
+        <a href="/">Return Home</a>
+      </nav>
     </div>
-    <div class="castellations"></div>
-    <div class="blackbars"></div>
   </div>
-</BaseLayout>
+  <div class="castellations"></div>
+  <div class="blackbars"></div>
+</div>
 <style>
   :root {
     --gray-40: #666666;
@@ -258,6 +260,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     background-origin: border-box;
   }
 
+  body {
+    grid-template-rows: auto;
+  }
+
   .outer-container {
     width: 100%;
     height: 100%;
@@ -273,16 +279,48 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   .content {
     align-self: center;
+    justify-self: center;
     display: grid;
     justify-content: center;
-
+    gap: 1rem;
+    padding: 1rem;
     font-family: monospace;
-    text-transform: uppercase;
     color: white;
     text-shadow:
       -1px -1px 0 #000,
       1px -1px 0 #000,
       -1px 1px 0 #000,
       1px 1px 0 #000;
+
+    background-color: black;
+  }
+.content > h1 {
+      text-transform: uppercase;
+}
+  nav.notfound-nav {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    padding-top: 1rem;
+  }
+
+  nav.notfound-nav > a {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none;
+  }
+
+  nav.notfound-nav > a:focus,
+  nav.notfound-nav > a:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  nav.notfound-nav > a::before {
+    content: "[";
+  }
+
+  nav.notfound-nav > a::after {
+    content: "]";
   }
 </style>
