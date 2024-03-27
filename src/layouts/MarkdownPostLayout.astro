@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-
+import Tags from "../components/Tags.astro";
 import { fade } from "astro:transitions";
 
 const { frontmatter } = Astro.props;
@@ -20,44 +20,8 @@ const { frontmatter } = Astro.props;
       />
     )
   }
-  <ul class="tags">
-    {
-      frontmatter.tags.map((tag) => (
-        <li class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </li>
-      ))
-    }
-  </ul>
+
+      <Tags tags={frontmatter.tags}/>
+
   <slot />
 </BaseLayout>
-
-<style>
-
-  .tags {
-    list-style: none;
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding: 0;
-  }
-
-  .tags > li {
-    display: grid;
-    place-content: center;
-  }
-  .tags > li > a {
-    color: #fff;
-    background-color: #000;
-    padding: 0.5rem;
-    outline-offset: 0.25rem;
-    outline-style: thick;
-    text-decoration: none;
-  }
-
-  .tags > li > a:focus-within, .tags > li > a:hover {
-    text-decoration: underline dotted;
-    text-underline-offset: 0.5cap;
-  }
-</style>
