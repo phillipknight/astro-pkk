@@ -9,19 +9,20 @@ const { frontmatter } = Astro.props;
 
 <BlogLayout pageTitle={frontmatter.title}>
   <header class="full-bleed wrapper">
-    {
-      frontmatter.image.url && (
-        <img
-          class="full-bleed"
-          src={frontmatter.image.url}
-          width="100%"
-          alt={frontmatter.image.alt}
-        />
-      )
-    }
+
     <h1>{frontmatter.title}</h1>
     <FormattedDate date={frontmatter.pubDate} />
   </header>
+  {
+    frontmatter.image.url && (
+      <img
+        
+        src={frontmatter.image.url}
+        width="100%"
+        alt={frontmatter.image.alt}
+      />
+    )
+  }
 
   <slot />
   <section>
@@ -32,5 +33,6 @@ const { frontmatter } = Astro.props;
   header {
     background-color: #000;
     color: #fff;
+    padding-top: calc(1em + 0.5rem);
   }
 </style>
