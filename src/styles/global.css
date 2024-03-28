@@ -110,25 +110,27 @@ p {
   text-wrap: pretty;
 }
 
-
+h1, h2, h3, h4, h5, h6 { 
+  text-wrap: balance;
+}
 h1 {
-  font-size: 5.2917rem;
+  font-size: 4.375rem;
 }
 
 h2 {
-  font-size: 2.6458rem;
+  font-size: 2.3958rem;
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 1.6875rem;
 }
 
 h4 {
-  font-size: 1.3333rem;
+  font-size: 1.3125rem;
 }
 
 h5 {
-  font-size: 1.1667rem;
+  font-size: 1.2083rem;
 }
 
 h6 {
@@ -136,5 +138,5 @@ h6 {
 }
 
 small, caption {
-  font-size:0.7708rem;
+  font-size:0.8542rem;
 }
