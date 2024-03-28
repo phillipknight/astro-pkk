@@ -15,7 +15,7 @@
   4. Improve text rendering */
 body {
    line-height: 1.5; 
-  -webkit-font-smoothing: antialiased;
+  /* -webkit-font-smoothing: antialiased; */
 } 
 /* 
 less line height for headings 
