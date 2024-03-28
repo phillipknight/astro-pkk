@@ -8,33 +8,29 @@ const { frontmatter } = Astro.props;
 ---
 
 <BlogLayout pageTitle={frontmatter.title}>
-  <h1>{frontmatter.title}</h1>
-  <div class="dateline">
-      <FormattedDate date={frontmatter.pubDate} />
-  </div>
-  <p transition:animate={fade({ duration: "2s" })}>
-    <em>{frontmatter.description}</em>
-  </p>
-
-  {
-    frontmatter.image.url && (
-      <img
-        src={frontmatter.image.url}
-        width="100%"
-        alt={frontmatter.image.alt}
-      />
-    )
-  }
-
-      <Tags tags={frontmatter.tags}/>
+  <header class="full-bleed wrapper">
+    {
+      frontmatter.image.url && (
+        <img
+          class="full-bleed"
+          src={frontmatter.image.url}
+          width="100%"
+          alt={frontmatter.image.alt}
+        />
+      )
+    }
+    <h1>{frontmatter.title}</h1>
+    <FormattedDate date={frontmatter.pubDate} />
+  </header>
 
   <slot />
+  <section>
+    <Tags tags={frontmatter.tags} />
+  </section>
 </BlogLayout>
 <style>
-  .dateline {
-    background-color: black; 
-    color: white; 
-    text-align: right;
-    padding-inline: 0.5cap;
+  header {
+    background-color: #000;
+    color: #fff;
   }
 </style>
