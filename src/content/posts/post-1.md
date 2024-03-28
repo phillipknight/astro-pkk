@@ -4,7 +4,7 @@ pubDate: 2024-02-27
 description: "It's difficult for me to think of myself as a product, but that's really what job seeking is. In this article, I describe how I tried using AI to analyze quotes from professional feedback as if they were Amazon customer reviews - for the product that is me."
 image:
     url: 'https://media.licdn.com/dms/image/D4D12AQH-WTrVLCtMRA/article-cover_image-shrink_720_1280/0/1709047417673?e=1715817600&v=beta&t=kgiwNNdWxzwpItBpcWHQpzyVWBTY2ZsBvuephgdOnEM'
-    alt: 'Photographs of Phillip surrounded by smiling colleagues at social functions'
+    alt: 'Photographs of Phillip surrounded by smiling colleagues at social functions' 
 tags: ["AI", "soft skills", "learning in public", "worklife"]
 ---
 About to leave my job and struggling to find the words to update my resume, I decided to read through all of the 360 degree employee reviews I received over the last half-decade. Re-reading from the perspective of the end, I found new value in these old reviews.
