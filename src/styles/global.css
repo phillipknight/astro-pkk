@@ -15,7 +15,7 @@
   4. Improve text rendering */
 body {
    line-height: 1.5; 
-  /* -webkit-font-smoothing: antialiased; */
+ /* -webkit-font-smoothing: antialiased; */
 } 
 /* 
 less line height for headings 
@@ -113,6 +113,39 @@ p {
 h1, h2, h3, h4, h5, h6 { 
   text-wrap: balance;
 }
+
+
+/* less big headings */ 
+h1 {
+  font-size: 3.1875rem;
+}
+
+h2 {
+  font-size: 1.9792rem;
+}
+
+h3 {
+  font-size: 1.4792rem;
+}
+
+h4 {
+  font-size: 1.2292rem;
+}
+
+h5 {
+  font-size: 1.1042rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+small, caption {
+  font-size:0.8333rem;
+}
+
+@media screen and (min-width: 30rem) {
+/* big headings */ 
 h1 {
   font-size: 4.375rem;
 }
@@ -139,4 +172,5 @@ h6 {
 
 small, caption {
   font-size:0.8542rem;
+}
 }
