@@ -16,9 +16,9 @@ const { pageData } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <SEO 
-      title={pageData.title} 
-      description={pageData.description}  
+    <SEO
+      title={pageData.title}
+      description={pageData.description}
       canonical={pageData.canonical}
       openGraph={{
         basic: {
@@ -34,12 +34,20 @@ const { pageData } = Astro.props;
           alt: pageData.image.alt,
         },
         article: {
-          authors:["Phillip Kent Knight",],
+          authors: ["Phillip Kent Knight"],
           publishedTime: pageData.pubDate,
           tags: pageData.tags,
         },
       }}
-
+      twitter={{
+        card: "summary_large_image",
+        site: "@phillipkent",
+        creator: "@phillipkent",
+        title: pageData.title,
+        image: pageData.image.url,
+        imageAlt: pageData.image.alt,
+        description: pageData.description,
+      }}
     />
     <ViewTransitions />
   </head>
