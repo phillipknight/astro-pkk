@@ -25,6 +25,7 @@ const { pageData } = Astro.props;
           title: pageData.title,
           type: "article",
           image: pageData.image.url,
+          url: pageData.canonical,
         },
         optional: {
           description: pageData.description,
