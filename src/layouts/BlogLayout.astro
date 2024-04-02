@@ -3,10 +3,11 @@ import { ViewTransitions } from "astro:transitions";
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { SEO } from "astro-seo";
 import "@fontsource/atkinson-hyperlegible";
 import "../styles/global.css";
 
-const { pageTitle } = Astro.props;
+const { pageData } = Astro.props;
 ---
 
 <html lang="en">
@@ -15,7 +16,27 @@ const { pageTitle } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <SEO 
+      title={pageData.title} 
+      description={pageData.description}  
+      canonical={pageData.canonical}
+      openGraph={{
+        basic: {
+          title: pageData.title,
+          type: "article",
+          image: pageData.image.url,
+        },
+        image: {
+          alt: pageData.image.alt,
+        },
+        article: {
+          authors:["Phillip Kent Knight",],
+          publishedTime: pageData.pubDate,
+          tags: pageData.tags,
+        },
+      }}
+
+    />
     <ViewTransitions />
   </head>
   <body>
