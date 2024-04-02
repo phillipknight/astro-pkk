@@ -7,7 +7,7 @@ import { fade } from "astro:transitions";
 const { frontmatter } = Astro.props;
 ---
 
-<BlogLayout pageTitle={frontmatter.title}>
+<BlogLayout pageData={ frontmatter }>
   <header class="full-bleed wrapper">
 
     <h1>{frontmatter.title}</h1>
