@@ -35,8 +35,12 @@ const { tags } = Astro.props;
     text-decoration: none;
   }
 
-  .tags > li > a:focus-within,
   .tags > li > a:hover {
+    text-decoration: underline dotted;
+    text-underline-offset: 0.5cap;
+  }
+
+  .tags > li > a:focus-within {
     text-decoration: underline dotted;
     text-underline-offset: 0.5cap;
   }
