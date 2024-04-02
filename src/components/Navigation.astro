@@ -8,17 +8,21 @@ const pathname = new URL(Astro.request.url).pathname;
     {
       Astro.url.pathname != "/" && (
         <li class="logo">
-          <a href="/">
-            Phillip Kent Knight
-          </a>
+          <a href="/">Phillip Kent Knight</a>
         </li>
       )
     }
     <li class="nav-item">
-      <a class={pathname === "/about/" ? "nav-link active" : "nav-link"} href="/about/">About</a>
+      <a
+        class={pathname === "/about/" ? "nav-link active" : "nav-link"}
+        href="/about/">About</a
+      >
     </li>
     <li class="nav-item">
-      <a class={pathname === "/blog/" ? "nav-link active" : "nav-link"} href="/blog/">Blog</a>
+      <a
+        class={pathname === "/blog/" ? "nav-link active" : "nav-link"}
+        href="/blog/">Blog</a
+      >
     </li>
   </ul>
 </nav>
@@ -36,12 +40,11 @@ const pathname = new URL(Astro.request.url).pathname;
 
   li.logo {
     margin-right: auto;
-    
   }
-  .logo:focus-within{
+  .logo:focus-within {
     font-style: italic;
   }
-   .logo:hover {
+  .logo:hover {
     font-style: italic;
   }
   .logo > * {
@@ -56,14 +59,12 @@ const pathname = new URL(Astro.request.url).pathname;
     border: 2px solid;
   }
 
-  .nav-item:focus-within{
+  .nav-item:focus-within {
     box-shadow: inset 2px 2px 1px #000000bb;
   }
-  .nav-item:hover{
+  .nav-item:hover {
     box-shadow: inset 2px 2px 1px #000000bb;
   }
-
-
 
   .nav-link {
     padding: 0.5rem;
