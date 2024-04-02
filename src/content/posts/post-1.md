@@ -6,6 +6,7 @@ image:
     url: 'https://media.licdn.com/dms/image/D4D12AQH-WTrVLCtMRA/article-cover_image-shrink_720_1280/0/1709047417673?e=1715817600&v=beta&t=kgiwNNdWxzwpItBpcWHQpzyVWBTY2ZsBvuephgdOnEM'
     alt: 'Photographs of Phillip surrounded by smiling colleagues at social functions' 
 tags: ["AI", "soft skills", "learning in public", "worklife"]
+canonical: "https://www.linkedin.com/pulse/i-asked-chatgpt-tell-me-why-people-like-working-phillip-kent-knight-sjqwf/"
 ---
 About to leave my job and struggling to find the words to update my resume, I decided to read through all of the 360 degree employee reviews I received over the last half-decade. Re-reading from the perspective of the end, I found new value in these old reviews.
 
