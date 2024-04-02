@@ -38,7 +38,10 @@ const pathname = new URL(Astro.request.url).pathname;
     margin-right: auto;
     
   }
-  .logo:focus-within, .logo:hover {
+  .logo:focus-within{
+    font-style: italic;
+  }
+   .logo:hover {
     font-style: italic;
   }
   .logo > * {
@@ -53,7 +56,9 @@ const pathname = new URL(Astro.request.url).pathname;
     border: 2px solid;
   }
 
-  .nav-item:focus-within,
+  .nav-item:focus-within{
+    box-shadow: inset 2px 2px 1px #000000bb;
+  }
   .nav-item:hover{
     box-shadow: inset 2px 2px 1px #000000bb;
   }
