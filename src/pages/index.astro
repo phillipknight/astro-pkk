@@ -5,8 +5,25 @@ const pageTitle = "Phillip Kent Knight";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>Hi, I'm Phil</h1>
-  <p>
-    A campaigner turned technologist, I help people build products with purpose.
-  </p>
+  <div class="full-page">
+    <div class="content">
+      <h1>Hi, I'm Phil</h1>
+      <p>
+        A campaigner turned technologist, I help people build products with
+        purpose.
+      </p>
+    </div>
+  </div>
 </BaseLayout>
+<style>
+  /* remove baseline alignment used elsewhere */
+  :global(.wrapper) {
+    align-content: normal;
+  }
+  .full-page {
+    display: grid;
+  }
+  .content {
+    place-content: center;
+  }
+</style>
