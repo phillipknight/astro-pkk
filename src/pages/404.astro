@@ -4,20 +4,21 @@ import MinimalLayout from "../layouts/MinimalLayout.astro";
 
 const pageTitle = "Page Not Found";
 ---
+
 <MinimalLayout pageTitle={pageTitle}>
-<div class="outer-container full-bleed">
-  <div class="inner-container colorbars">
-    <div class="content">
-      <h1>404 - Page Not Found</h1>
-      <p>Well, shit... Something's gone wrong.</p>
-      <nav class="notfound-nav">
-        <a href="/">Return Home</a>
-      </nav>
+  <div class="outer-container">
+    <div class="inner-container colorbars">
+      <div class="content">
+        <h1>404 - Page Not Found</h1>
+        <p>Well, shit... Something's gone wrong.</p>
+        <nav class="notfound-nav">
+          <a href="/">Return Home</a>
+        </nav>
+      </div>
     </div>
+    <div class="castellations"></div>
+    <div class="blackbars"></div>
   </div>
-  <div class="castellations"></div>
-  <div class="blackbars"></div>
-</div>
 </MinimalLayout>
 <style>
   :root {
@@ -297,9 +298,9 @@ const pageTitle = "Page Not Found";
 
     background-color: black;
   }
-.content > h1 {
-      text-transform: uppercase;
-}
+  .content > h1 {
+    text-transform: uppercase;
+  }
   nav.notfound-nav {
     display: flex;
     justify-content: center;
