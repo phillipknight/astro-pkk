@@ -1,84 +1,82 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Card } from "accessible-astro-components";
 import FormattedDate from "../components/FormattedDate.astro";
-
 
 const pageTitle = "Blog";
 const allPosts = await getCollection("posts");
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-<h1>Blog</h1>
+  <h1>Blog</h1>
   <ul class="new-cards">
     {
       allPosts.map((post) => (
-        <li>
-          <h2>{post.data.title}</h2>
-          <FormattedDate date={post.data.pubDate} />
-          <p>{post.data.description}</p>
-          <a href={`/posts/${post.slug}/`}>Read more</a>      
+        <li class="card">
+          <h2>
+            <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
+          </h2>
+          <div class="description"><p>{post.data.description}</p></div>
+          <div class="time">
+            <FormattedDate date={post.data.pubDate} />
+          </div>
         </li>
       ))
     }
   </ul>
 
-  <ul class="cards">
-    {
-      allPosts.map((post) => (
-        <li>
-          <Card
-            url={`/posts/${post.slug}/`}
-            title={post.data.title}
-            img={post.data.image.url}
-            footer=""
-          >
-            {post.data.description}
-          </Card>
-        </li>
-      ))
-    }
-  </ul>
   <a href="/tags">All tags</a>
 </BaseLayout>
 
 <style>
-  ul.cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1.5rem;
+  ul.new-cards {
+    padding-inline-start: 0;
     list-style: none;
-    padding-inline-start: 0;
-
-    @media (min-width: 550px) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 1.5rem;
-    }
-
-    @media (min-width: 950px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-
-  ul.new-cards { 
-    padding-inline-start: 0;
-    list-style:none;
-    list-style-type:none;
-
+    list-style-type: none;
+    grid-template-columns: 1fr 1fr;
     display: grid;
     gap: 1.5rem;
+  }
 
+  .card {
+    box-shadow: 2px 2px 1px #000000bb;
+    border: 2px solid;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
 
-    & li {
-      box-shadow: 2px 2px 1px #000000bb;
-      border: 2px solid;
-      padding: 1.5rem;
-      display: grid;
-      gap: 1.5rem;
-    }
+  .card:focus-within {
+    box-shadow: inset 2px 2px 1px #000000bb;
+  }
+  .card:has(a):hover {
+    box-shadow: inset 2px 2px 1px #000000bb;
+  }
+
+  .card h2 > a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .card h2 > a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
   }
 
 
+  .time { 
+    margin-top: auto;
+    margin-left: auto;
+  }
+
+
+  .card:first-child {
+    grid-column: 1 / -1;
+  }
 </style>
