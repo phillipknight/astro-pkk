@@ -1,0 +1,61 @@
+---
+import FormattedDate from "../components/FormattedDate.astro";
+
+const {
+  url = "#",
+  headline = "Default title",
+  body = "A very simple example of a description",
+  date = "",
+} = Astro.props;
+---
+
+<li class="card">
+  <h2>
+    <a href={url}>{headline}</a>
+  </h2>
+  <div class="description"><p>{body}</p></div>
+  {
+    date && (
+      <div class="time">
+        <FormattedDate date={date} />
+      </div>
+    )
+  }
+</li>
+
+<style>
+  .card {
+    box-shadow: 2px 2px 1px #000000bb;
+    border: 2px solid;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .card:focus-within {
+    box-shadow: inset 2px 2px 1px #000000bb;
+  }
+  .card:has(a):hover {
+    box-shadow: inset 2px 2px 1px #000000bb;
+  }
+
+  .card h2 > a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .card h2 > a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .time {
+    margin-left: auto;
+  }
+</style>

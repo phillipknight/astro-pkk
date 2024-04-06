@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import FormattedDate from "../components/FormattedDate.astro";
+import Card from "../components/Card.astro";
 
 const pageTitle = "Blog";
 const allPosts = await getCollection("posts");
@@ -9,18 +9,15 @@ const allPosts = await getCollection("posts");
 
 <BaseLayout pageTitle={pageTitle}>
   <h1>Blog</h1>
-  <ul class="new-cards">
+  <ul class="blog-cards">
     {
       allPosts.map((post) => (
-        <li class="card">
-          <h2>
-            <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
-          </h2>
-          <div class="description"><p>{post.data.description}</p></div>
-          <div class="time">
-            <FormattedDate date={post.data.pubDate} />
-          </div>
-        </li>
+        <Card
+          url={`/posts/${post.slug}/`}
+          headline={post.data.title}
+          body={post.data.description}
+          date={post.data.pubDate}
+        />
       ))
     }
   </ul>
@@ -29,54 +26,11 @@ const allPosts = await getCollection("posts");
 </BaseLayout>
 
 <style>
-  ul.new-cards {
+  ul.blog-cards {
     padding-inline-start: 0;
     list-style: none;
     list-style-type: none;
-    grid-template-columns: 1fr 1fr;
     display: grid;
     gap: 1.5rem;
-  }
-
-  .card {
-    box-shadow: 2px 2px 1px #000000bb;
-    border: 2px solid;
-    padding: 1.5rem;
-    gap: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  .card:focus-within {
-    box-shadow: inset 2px 2px 1px #000000bb;
-  }
-  .card:has(a):hover {
-    box-shadow: inset 2px 2px 1px #000000bb;
-  }
-
-  .card h2 > a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .card h2 > a:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-
-  .time { 
-    margin-top: auto;
-    margin-left: auto;
-  }
-
-
-  .card:first-child {
-    grid-column: 1 / -1;
   }
 </style>
