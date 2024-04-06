@@ -10,3 +10,36 @@ const pageTitle = "Tag Index";
 <BaseLayout pageTitle={pageTitle}>
   <Tags tags={tags} />
 </BaseLayout>
+<style is:global>
+    .tags {
+    list-style: none;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  .tags > li {
+    display: grid;
+    place-content: center;
+  }
+  .tags > li > a {
+    color: #fff;
+    background-color: #000;
+    padding: 0.5rem;
+    outline-offset: 0.25rem;
+    outline-style: thick;
+    text-decoration: none;
+  }
+
+  .tags > li > a:hover {
+    text-decoration: underline dotted;
+    text-underline-offset: 0.5cap;
+  }
+
+  .tags > li > a:focus-within {
+    text-decoration: underline dotted;
+    text-underline-offset: 0.5cap;
+  }
+</style>
