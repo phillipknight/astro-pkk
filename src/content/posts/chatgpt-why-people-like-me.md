@@ -20,7 +20,7 @@ I was reminded of tons of big wins, to add to my list of accomplishments, includ
 
 2. **I (minimally) cleaned up anything that required context/wouldn't make sense on its own.** For example, clarifying words like "development" which may have many different meanings in my work.
 
-3. **I went to ChatGPT and provided the prompt:** "In the following message, I will send you several quotes that are all about a person named Phil. After I send them, can you please tell me what you know about Phil?"
+3. **I went to ChatGPT and provided the prompt:** "`In the following message, I will send you several quotes that are all about a person named Phil. After I send them, can you please tell me what you know about Phil?`"
 
 4. **I provided a list of quotes, and ChatGPT gave me a summary. It also output a list of attributes and qualities it learned about me** - with citations for the knowledge, for example: *"Innovative Thinking: Phil is known for challenging the team to think beyond visual aesthetics, encouraging consideration of how products will work and be used by all users. He also contributes ideas about new tactics and technologies, with a strong focus on accessibility and usability."*
 
