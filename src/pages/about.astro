@@ -7,64 +7,106 @@ const pageTitle = "About Me";
 <BaseLayout pageTitle={pageTitle}>
   <h1>About Me</h1>
   <section class="full-bleed wrapper">
-    <figure class="polaroid">
-      <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/382237964_10225906365979268_1482796169879502037_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KoD8uiFcx6kQ7kNvgHq4K9Q&_nc_ht=scontent-lga3-1.xx&oh=00_AfB1hSFcM_pQ2LYrqahWkQ_IXq_O0y7lEkXOFQI7jrIGHg&oe=6641E3A2" />
-      <figcaption>
-        <p>Caption of many, many, many words</p>
-      </figcaption>
-    </figure>
+    <div class="intro-container">
+      <figure class="polaroid">
+        <img
+          src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/382237964_10225906365979268_1482796169879502037_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KoD8uiFcx6kQ7kNvgHq4K9Q&_nc_ht=scontent-lga3-1.xx&oh=00_AfB1hSFcM_pQ2LYrqahWkQ_IXq_O0y7lEkXOFQI7jrIGHg&oe=6641E3A2"
+          alt="A selfie of Phil, standing in the fading glow of sunset on a dock in a marina with water visible in the background"
+        />
+      </figure>
+      <div class="quick-info">
+        <h2 class="visually-hidden">Quick Facts</h2>
+        <ul>
+          <li>Name: <strong>Phillip Kent Knight</strong></li>
+          <li>Location: <strong>Washington, DC</strong></li>
+          <li>Origin: <strong>Los Angeles, CA</strong></li>
+          <li>Years in tech: <strong>10+</strong></li>
+          <li>Beard: <strong>epic</strong></li>
+        </ul>
 
+        <h2 class="visually-hidden">Contact Info</h2>
+        <ul>
+          <li><span class="blockspam" aria-hidden="true">this is just obfuscation</span>pkk@<!-- attempt to evade bots -->phillipkentknight.com</li>
+          <li><a href="https://www.codepen.io/phillipkent"></a></li>
+          
+        </ul>
 
+      </div>
+    </div>
   </section>
 
-
   <section class="full-bleed wrapper">
-  <h2>Tinkering with technology and trying to make a difference</h2>
-  <p>
-    I've spent over a decade helping campaigns and nonprofit organizations build
-    and manage web products designed to change the world.
-  </p>
+    <h2>Tinkering with technology and trying to make a difference</h2>
+    <p>
+      I've spent over a decade helping campaigns and nonprofit organizations
+      build and manage web products designed to change the world.
+    </p>
 
-  <p>
-    Combining experience in campaigns with expertise in technology, I help teams
-    bridge the gaps between creators, campaigners, developers, and stakeholders.
-  </p>
+    <p>
+      Combining experience in campaigns with expertise in technology, I help
+      teams bridge the gaps between creators, campaigners, developers, and
+      stakeholders.
+    </p>
 
-  <p>
-    My early career included front-line field organizing, traditional
-    communications, and campaign strategy. Now, my specialty is bringing this
-    knowledge into the digital products I build.
-  </p>
+    <p>
+      My early career included front-line field organizing, traditional
+      communications, and campaign strategy. Now, my specialty is bringing this
+      knowledge into the digital products I build.
+    </p>
 
-  <p>
-    I work well with campaigners and designers, and I'm happy to facilitate
-    collaboration on topics including accessibility, frontend code, user
-    experience, and product development.
-  </p>
+    <p>
+      I work well with campaigners and designers, and I'm happy to facilitate
+      collaboration on topics including accessibility, frontend code, user
+      experience, and product development.
+    </p>
 
-  <p>
-    I'm continuously learning and expanding my technical skillset both
-    professionally and for fun. I'm comfortable building production-quality CSS,
-    HTML, and JavaScript as well as working with modern frameworks.
-  </p>
+    <p>
+      I'm continuously learning and expanding my technical skillset both
+      professionally and for fun. I'm comfortable building production-quality
+      CSS, HTML, and JavaScript as well as working with modern frameworks.
+    </p>
 
-  <p>
-    Some of my best work has been using, hacking, extending, and integrating the
-    most powerful and popular toolsets including platforms like ActionKit,
-    Ghost, WordPress, NationBuilder, and New/Mode.
-  </p>
+    <p>
+      Some of my best work has been using, hacking, extending, and integrating
+      the most powerful and popular toolsets including platforms like ActionKit,
+      Ghost, WordPress, NationBuilder, and New/Mode.
+    </p>
   </section>
 </BaseLayout>
 
 <style>
+.intro-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
 
 
- figure.polaroid {
-  padding: 1rem;
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
-  background-color: white;
-  height: calc(30ch + 2rem + 2cap);
-  max-width: 30ch;
-  transform: translateX(-1.75rem) rotate(-3deg);
- }
+  figure.polaroid {
+    padding: 1rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+    background-color: white;
+    aspect-ratio: 33 / 39;
+    max-width: 30ch;
+    transform: translateX(-1.75rem) rotate(-3deg);
+  }
+
+  .quick-info {
+    display:grid;
+    align-content: stretch;
+    align-items: center;
+    gap: 1rem;
+  }
+  .quick-info > ul { 
+    list-style: none;
+    list-style-type: none;
+    list-style-position: inside;
+    padding-inline-start: 0;
+  }
+
+
+
+  span.blockspam {
+  display: none;
+}
 </style>
