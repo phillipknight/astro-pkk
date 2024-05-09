@@ -2,10 +2,70 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "About Me";
-
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <h1>About Me</h1>
+  <div class="biobox">
+    <img
+      src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/382237964_10225906365979268_1482796169879502037_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KoD8uiFcx6kQ7kNvgHq4K9Q&_nc_ht=scontent-lga3-1.xx&oh=00_AfB1hSFcM_pQ2LYrqahWkQ_IXq_O0y7lEkXOFQI7jrIGHg&oe=6641E3A2"
+    />
+    <div class="info">
+      <ul>
+        <li>Name: Phillip Kent Knight</li>
+        <li>Home town: Los Angeles, CA</li>
+        <li>Home base: Washington, DC</li>
+        <li>Beard: epic</li>
+      </ul>
 
+      <div class="contact">
+        <p>Start a conversation with me</p>
+      </div>
+    </div>
+  </div>
+  <h2>Tinkering with technology and trying to make a difference</h2>
+  <p>
+    I've spent over a decade helping campaigns and nonprofit organizations build
+    and manage web products designed to change the world.
+  </p>
+
+  <p>
+    Combining experience in campaigns with expertise in technology, I help teams
+    bridge the gaps between creators, campaigners, developers, and stakeholders.
+  </p>
+
+  <p>
+    My early career included front-line field organizing, traditional
+    communications, and campaign strategy. Now, my specialty is bringing this
+    knowledge into the digital products I build.
+  </p>
+
+  <p>
+    I work well with campaigners and designers, and I'm happy to facilitate
+    collaboration on topics including accessibility, frontend code, user
+    experience, and product development.
+  </p>
+
+  <p>
+    I'm continuously learning and expanding my technical skillset both
+    professionally and for fun. I'm comfortable building production-quality CSS,
+    HTML, and JavaScript as well as working with modern frameworks.
+  </p>
+
+  <p>
+    Some of my best work has been using, hacking, extending, and integrating the
+    most powerful and popular toolsets including platforms like ActionKit,
+    Ghost, WordPress, NationBuilder, and New/Mode.
+  </p>
 </BaseLayout>
+
+<style>
+  .biobox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .biobox .info {
+    grid-column: auto / span 2;
+  }
+</style>
