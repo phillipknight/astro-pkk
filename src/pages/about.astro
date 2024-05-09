@@ -6,23 +6,19 @@ const pageTitle = "About Me";
 
 <BaseLayout pageTitle={pageTitle}>
   <h1>About Me</h1>
-  <div class="biobox">
-    <img
-      src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/382237964_10225906365979268_1482796169879502037_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KoD8uiFcx6kQ7kNvgHq4K9Q&_nc_ht=scontent-lga3-1.xx&oh=00_AfB1hSFcM_pQ2LYrqahWkQ_IXq_O0y7lEkXOFQI7jrIGHg&oe=6641E3A2"
-    />
-    <div class="info">
-      <ul>
-        <li>Name: Phillip Kent Knight</li>
-        <li>Home town: Los Angeles, CA</li>
-        <li>Home base: Washington, DC</li>
-        <li>Beard: epic</li>
-      </ul>
+  <section class="full-bleed wrapper">
+    <figure class="polaroid">
+      <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/382237964_10225906365979268_1482796169879502037_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KoD8uiFcx6kQ7kNvgHq4K9Q&_nc_ht=scontent-lga3-1.xx&oh=00_AfB1hSFcM_pQ2LYrqahWkQ_IXq_O0y7lEkXOFQI7jrIGHg&oe=6641E3A2" />
+      <figcaption>
+        <p>Caption of many, many, many words</p>
+      </figcaption>
+    </figure>
 
-      <div class="contact">
-        <p>Start a conversation with me</p>
-      </div>
-    </div>
-  </div>
+
+  </section>
+
+
+  <section class="full-bleed wrapper">
   <h2>Tinkering with technology and trying to make a difference</h2>
   <p>
     I've spent over a decade helping campaigns and nonprofit organizations build
@@ -57,22 +53,15 @@ const pageTitle = "About Me";
     most powerful and popular toolsets including platforms like ActionKit,
     Ghost, WordPress, NationBuilder, and New/Mode.
   </p>
+  </section>
 </BaseLayout>
 
 <style>
-  .biobox {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
 
-  .biobox .info {
-    grid-column: auto / span 2;
 
-    padding: 1rem;
-  }
-
-  .biobox .info ul {
-    list-style: none;
-    padding-inline-start: 0;
-  }
+ figure.polaroid {
+  padding: 1rem;
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+  width: min-content;
+ }
 </style>
