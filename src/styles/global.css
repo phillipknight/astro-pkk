@@ -14,9 +14,9 @@
   3. Add accessible line-height
   4. Improve text rendering */
 body {
-   line-height: 1.5; 
- /* -webkit-font-smoothing: antialiased; */
-} 
+  line-height: 1.5;
+  /* -webkit-font-smoothing: antialiased; */
+}
 /* 
 less line height for headings 
 h1,h2,h3,h4,h5,h6 {
@@ -113,12 +113,16 @@ p {
   text-wrap: pretty;
 }
 
-h1, h2, h3, h4, h5, h6 { 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
-
-/* less big headings */ 
+/* less big headings */
 h1 {
   font-size: 3.1875rem;
 }
@@ -143,37 +147,39 @@ h6 {
   font-size: 1rem;
 }
 
-small, caption {
-  font-size:0.8333rem;
+small,
+caption {
+  font-size: 0.8333rem;
 }
 
 @media screen and (min-width: 30rem) {
-/* big headings */ 
-h1 {
-  font-size: 4.375rem;
-}
+  /* big headings */
+  h1 {
+    font-size: 4.375rem;
+  }
 
-h2 {
-  font-size: 2.3958rem;
-}
+  h2 {
+    font-size: 2.3958rem;
+  }
 
-h3 {
-  font-size: 1.6875rem;
-}
+  h3 {
+    font-size: 1.6875rem;
+  }
 
-h4 {
-  font-size: 1.3125rem;
-}
+  h4 {
+    font-size: 1.3125rem;
+  }
 
-h5 {
-  font-size: 1.2083rem;
-}
+  h5 {
+    font-size: 1.2083rem;
+  }
 
-h6 {
-  font-size: 1rem;
-}
+  h6 {
+    font-size: 1rem;
+  }
 
-small, caption {
-  font-size:0.8542rem;
-}
+  small,
+  caption {
+    font-size: 0.8542rem;
+  }
 }
