@@ -5,113 +5,140 @@ const pageTitle = "About Me";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>About Me</h1>
-  <section class="full-bleed wrapper">
-    <div class="intro-container">
-      <figure class="polaroid">
-        <img
-          src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/382237964_10225906365979268_1482796169879502037_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KoD8uiFcx6kQ7kNvgHq4K9Q&_nc_ht=scontent-lga3-1.xx&oh=00_AfB1hSFcM_pQ2LYrqahWkQ_IXq_O0y7lEkXOFQI7jrIGHg&oe=6641E3A2"
-          alt="A selfie of Phil, standing in the fading glow of sunset on a dock in a marina with water visible in the background"
-        />
-      </figure>
-      <div class="quick-info">
-        <h2 class="visually-hidden">Quick Facts</h2>
-        <ul>
-          <li>Name: <strong>Phillip Kent Knight</strong></li>
-          <li>Location: <strong>Washington, DC</strong></li>
-          <li>Origin: <strong>Los Angeles, CA</strong></li>
-          <li>Beard: <strong>long</strong></li>
-        </ul>
+  <h1 class="full-bleed">About Me</h1>
 
-        <h2 class="visually-hidden">Contact Info</h2>
+  <div class="full-bleed my-space">
+    <div class="area left">
+      <div class="quick-info">
+        <div class="profile-photo">
+          <img
+            src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/382237964_10225906365979268_1482796169879502037_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KoD8uiFcx6kQ7kNvgHq4K9Q&_nc_ht=scontent-lga3-1.xx&oh=00_AfB1hSFcM_pQ2LYrqahWkQ_IXq_O0y7lEkXOFQI7jrIGHg&oe=6641E3A2"
+          />
+          <!-- TODO <button>change picture</button> -->
+        </div>
+        <div class="info-basic">
+          <p><strong>Phil</strong></p>
+          <p>he/him/his</p>
+          <p>Washington, DC</p>
+          <p>United States</p>
+        </div>
+      </div>
+      <div class="contact-box">
+        <h2>Contacting Phil</h2>
         <ul>
-          <li>
-            <span class="blockspam" aria-hidden="true"
-              >this is just obfuscation</span
-            >pkk@<!-- attempt to evade bots -->phillipkentknight.com
-          </li>
-          <li><a href="https://www.codepen.io/phillipkent"></a></li>
+          <li>Copy Email to Clipboard</li>
+          <li><a href="#">Send Email in App</a></li>
+          <li><a href="#">Connect on LinkedIn</a></li>
+          <li><a href="#">Collaborate on Codepen</a></li>
         </ul>
       </div>
     </div>
-  </section>
+    <div class="area right">
+      <div class="biography wrapper">
+        <h2>Tinkering with technology and trying to make a difference</h2>
+        <p>
+          I've spent over a decade helping campaigns and nonprofit organizations
+          build and manage web products designed to change the world.
+        </p>
 
-  <section class="full-bleed wrapper">
-    <h2>Tinkering with technology and trying to make a difference</h2>
-    <p>
-      I've spent over a decade helping campaigns and nonprofit organizations
-      build and manage web products designed to change the world.
-    </p>
+        <p>
+          Combining experience in campaigns with expertise in technology, I help
+          teams bridge the gaps between creators, campaigners, developers, and
+          stakeholders.
+        </p>
 
-    <p>
-      Combining experience in campaigns with expertise in technology, I help
-      teams bridge the gaps between creators, campaigners, developers, and
-      stakeholders.
-    </p>
+        <p>
+          My early career included front-line field organizing, traditional
+          communications, and campaign strategy. Now, my specialty is bringing
+          this knowledge into the digital products I build.
+        </p>
 
-    <p>
-      My early career included front-line field organizing, traditional
-      communications, and campaign strategy. Now, my specialty is bringing this
-      knowledge into the digital products I build.
-    </p>
+        <p>
+          I work well with campaigners and designers, and I'm happy to
+          facilitate collaboration on topics including accessibility, frontend
+          code, user experience, and product development.
+        </p>
 
-    <p>
-      I work well with campaigners and designers, and I'm happy to facilitate
-      collaboration on topics including accessibility, frontend code, user
-      experience, and product development.
-    </p>
+        <p>
+          I'm continuously learning and expanding my technical skillset both
+          professionally and for fun. I'm comfortable building
+          production-quality CSS, HTML, and JavaScript as well as working with
+          modern frameworks.
+        </p>
 
-    <p>
-      I'm continuously learning and expanding my technical skillset both
-      professionally and for fun. I'm comfortable building production-quality
-      CSS, HTML, and JavaScript as well as working with modern frameworks.
-    </p>
-
-    <p>
-      Some of my best work has been using, hacking, extending, and integrating
-      the most powerful and popular toolsets including platforms like ActionKit,
-      Ghost, WordPress, NationBuilder, and New/Mode.
-    </p>
-  </section>
+        <p>
+          Some of my best work has been using, hacking, extending, and
+          integrating the most powerful and popular toolsets including platforms
+          like ActionKit, Ghost, WordPress, NationBuilder, and New/Mode.
+        </p>
+      </div>
+    </div>
+  </div>
 </BaseLayout>
 
 <style>
-  .intro-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+  span.blockspam {
+    display: none;
   }
 
-  figure.polaroid {
-    padding: 1rem;
-    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
-    background-color: white;
-    aspect-ratio: 33 / 39;
-    max-width: 30ch;
-    transform: translateX(-1.75rem) rotate(-3deg);
+  h1 {
+    padding-inline: 1.5rem;
   }
-  figure.polaroid > img {
-    border: inset 1px;
+
+  .my-space {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .area {
+    display: grid;
+    align-content: baseline;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .area.left {
+    flex: 1;
+  }
+
+  .area.right {
+    flex: 2;
   }
 
   .quick-info {
-    display: grid;
-    align-content: stretch;
-    align-items: center;
-    gap: 1rem;
-    margin-inline: auto;
-
-    background-color: #efefef;
-    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: baseline;
+    gap: 1.5rem;
   }
-  .quick-info > ul {
+  .quick-info img {
+    max-width: 30ch;
+  }
+
+  .contact-box {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    max-width: 60ch;
+  }
+
+  .contact-box > * {
+    padding-inline: 1.5rem;
+  }
+
+  .contact-box ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: baseline;
+    justify-content: baseline;
     list-style: none;
     list-style-type: none;
     list-style-position: inside;
-    padding-inline-start: 0;
-  }
+    gap: 1.5rem;
+    padding: 1.5rem;
 
-  span.blockspam {
-    display: none;
+    background-color: white;
+    color: black;
   }
 </style>
