@@ -26,10 +26,10 @@ const pageTitle = "About Me";
       <div class="contact-box">
         <h2>Contacting Phil</h2>
         <ul>
-          <li>Copy Email to Clipboard</li>
-          <li><a href="#">Send Email in App</a></li>
-          <li><a href="#">Connect on LinkedIn</a></li>
-          <li><a href="#">Collaborate on Codepen</a></li>
+          <li><button class="button-as-link" onclick="copyEmailAddress()">Copy Email to Clipboard</button></li>
+          <li><a href="mailto:&#112;&#107;&#107;&#064;&#112;&#104;&#105;&#108;&#108;&#105;&#112;&#107;&#101;&#110;&#116;&#107;&#110;&#105;&#103;&#104;&#116;&#046;&#099;&#111;&#109;">Send Email in App</a></li>
+          <li><a href="https://www.linkedin.com/in/phillipkentknight">Connect on LinkedIn</a></li>
+          <li><a href="https://www.codepen.io/phillipkent">Collaborate on Codepen</a></li>
         </ul>
       </div>
     </div>
@@ -75,7 +75,15 @@ const pageTitle = "About Me";
     </div>
   </div>
 </BaseLayout>
+<script is:inline>
+  function copyEmailAddress(){
+    var emailHandle = 'pkk';
+    var emailDomain = 'phillipkentknight.com';
 
+    navigator.clipboard.writeText(`${emailHandle}@${emailDomain}`);
+                
+  }
+</script>
 <style>
   span.blockspam {
     display: none;
@@ -88,22 +96,27 @@ const pageTitle = "About Me";
   .my-space {
     display: flex;
     flex-wrap: wrap;
+    gap: 1.5rem;
+
   }
 
   .area {
     display: grid;
     align-content: baseline;
     gap: 1.5rem;
-    padding: 1.5rem;
     max-width: 100%;
   }
 
   .area.left {
     flex: 1;
+    padding-inline: 1.5rem;
+    flex-basis:20ch;
+
   }
 
   .area.right {
     flex: 2;
+    flex-basis:60ch;
   }
 
   .quick-info {
@@ -140,5 +153,17 @@ const pageTitle = "About Me";
 
     background-color: white;
     color: black;
+  }
+
+
+  .button-as-link {
+    border: 0; 
+    background: 0; 
+    padding:unset;
+    text-align: start;
+    text-decoration: underline;
+    color: LinkText;
+    color: -webkit-link;
+    cursor: pointer;
   }
 </style>
