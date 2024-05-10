@@ -20,17 +20,18 @@ const pageTitle = "About Me";
           <li>Name: <strong>Phillip Kent Knight</strong></li>
           <li>Location: <strong>Washington, DC</strong></li>
           <li>Origin: <strong>Los Angeles, CA</strong></li>
-          <li>Years in tech: <strong>10+</strong></li>
-          <li>Beard: <strong>epic</strong></li>
+          <li>Beard: <strong>long</strong></li>
         </ul>
 
         <h2 class="visually-hidden">Contact Info</h2>
         <ul>
-          <li><span class="blockspam" aria-hidden="true">this is just obfuscation</span>pkk@<!-- attempt to evade bots -->phillipkentknight.com</li>
+          <li>
+            <span class="blockspam" aria-hidden="true"
+              >this is just obfuscation</span
+            >pkk@<!-- attempt to evade bots -->phillipkentknight.com
+          </li>
           <li><a href="https://www.codepen.io/phillipkent"></a></li>
-          
         </ul>
-
       </div>
     </div>
   </section>
@@ -75,12 +76,11 @@ const pageTitle = "About Me";
 </BaseLayout>
 
 <style>
-.intro-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
+  .intro-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
 
   figure.polaroid {
     padding: 1rem;
@@ -95,21 +95,23 @@ const pageTitle = "About Me";
   }
 
   .quick-info {
-    display:grid;
+    display: grid;
     align-content: stretch;
     align-items: center;
     gap: 1rem;
+    margin-inline: auto;
+
+    background-color: #efefef;
+    padding: 1.5rem;
   }
-  .quick-info > ul { 
+  .quick-info > ul {
     list-style: none;
     list-style-type: none;
     list-style-position: inside;
     padding-inline-start: 0;
   }
 
-
-
   span.blockspam {
-  display: none;
-}
+    display: none;
+  }
 </style>
