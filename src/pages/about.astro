@@ -102,6 +102,29 @@ const pageTitle = "About Me";
     display: none;
   }
 
+  .button-as-link {
+    border: 0;
+    background: 0;
+    text-align: start;
+    text-decoration: underline;
+    color: LinkText;
+    color: -webkit-link;
+    cursor: pointer;
+    align-items: normal;
+    border-style: none;
+    box-sizing: border-box;
+    display: inline;
+    font: inherit;
+    height: auto;
+    padding: unset;
+    perspective-origin: 0 0;
+    transform-origin: 0 0;
+    width: auto;
+    -moz-appearance: none;
+    -webkit-logical-height: 1em; /* Chrome ignores auto, so we have to use this hack to set the correct height  */
+    -webkit-logical-width: auto; /* Chrome ignores auto, but here for completeness */
+  }
+
   h1 {
     padding-inline: 1.5rem;
   }
@@ -142,7 +165,7 @@ const pageTitle = "About Me";
   .contact-box {
     background-color: black;
     color: white;
-    border: 1px solid black;
+    border: 1.5px solid black;
   }
 
   .contact-box h2 {
@@ -156,8 +179,6 @@ const pageTitle = "About Me";
   .contact-box ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-content: baseline;
-    justify-content: baseline;
     list-style: none;
     list-style-type: none;
     list-style-position: inside;
@@ -166,31 +187,5 @@ const pageTitle = "About Me";
 
     background-color: white;
     color: black;
-  }
-
-  .button-as-link {
-    border: 0;
-    background: 0;
-    padding: unset;
-    text-align: start;
-    text-decoration: underline;
-    color: LinkText;
-    color: -webkit-link;
-    cursor: pointer;
-    align-items: normal;
-    border-style: none;
-    box-sizing: content-box;
-    display: inline;
-    font: inherit;
-    height: auto;
-    padding: 0;
-    perspective-origin: 0 0;
-    text-align: start;
-    text-decoration: underline;
-    transform-origin: 0 0;
-    width: auto;
-    -moz-appearance: none;
-    -webkit-logical-height: 1em; /* Chrome ignores auto, so we have to use this hack to set the correct height  */
-    -webkit-logical-width: auto; /* Chrome ignores auto, but here for completeness */
   }
 </style>
