@@ -26,10 +26,24 @@ const pageTitle = "About Me";
       <div class="contact-box">
         <h2>Contacting Phil</h2>
         <ul>
-          <li><button class="button-as-link" onclick="copyEmailAddress()">Copy Email to Clipboard</button></li>
-          <li><a href="mailto:&#112;&#107;&#107;&#064;&#112;&#104;&#105;&#108;&#108;&#105;&#112;&#107;&#101;&#110;&#116;&#107;&#110;&#105;&#103;&#104;&#116;&#046;&#099;&#111;&#109;">Send Email in App</a></li>
-          <li><a href="https://www.linkedin.com/in/phillipkentknight">Connect on LinkedIn</a></li>
-          <li><a href="https://www.codepen.io/phillipkent">Collaborate on Codepen</a></li>
+          <li>
+            <button class="button-as-link" onclick="copyEmailAddress()"
+              >Copy Email to Clipboard</button
+            >
+          </li>
+          <li>
+            <a href="mailto:pkk@phillipkentknight.com">Send Email in App</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/phillipkentknight"
+              >Connect on LinkedIn</a
+            >
+          </li>
+          <li>
+            <a href="https://www.codepen.io/phillipkent"
+              >Collaborate on Codepen</a
+            >
+          </li>
         </ul>
       </div>
     </div>
@@ -76,12 +90,11 @@ const pageTitle = "About Me";
   </div>
 </BaseLayout>
 <script is:inline>
-  function copyEmailAddress(){
-    var emailHandle = 'pkk';
-    var emailDomain = 'phillipkentknight.com';
+  function copyEmailAddress() {
+    var emailHandle = "pkk";
+    var emailDomain = "phillipkentknight.com";
 
     navigator.clipboard.writeText(`${emailHandle}@${emailDomain}`);
-                
   }
 </script>
 <style>
@@ -97,26 +110,18 @@ const pageTitle = "About Me";
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-
-  }
-
-  .area {
-    display: grid;
-    align-content: baseline;
-    gap: 1.5rem;
-    max-width: 100%;
   }
 
   .area.left {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     padding-inline: 1.5rem;
-    flex-basis:20ch;
-
+    flex: 1;
   }
 
   .area.right {
-    flex: 2;
-    flex-basis:60ch;
+    flex: 3;
   }
 
   .quick-info {
@@ -125,15 +130,23 @@ const pageTitle = "About Me";
     align-content: baseline;
     gap: 1.5rem;
   }
-  .quick-info img {
-    max-width: 30ch;
+  .quick-info .profile-photo {
+    flex-basis: 24ch;
+  }
+
+  .info-basic {
+    flex: 1;
+    flex-basis: max-content;
   }
 
   .contact-box {
     background-color: black;
     color: white;
     border: 1px solid black;
-    max-width: 60ch;
+  }
+
+  .contact-box h2 {
+    font-size: 1.3125rem;
   }
 
   .contact-box > * {
@@ -155,15 +168,29 @@ const pageTitle = "About Me";
     color: black;
   }
 
-
   .button-as-link {
-    border: 0; 
-    background: 0; 
-    padding:unset;
+    border: 0;
+    background: 0;
+    padding: unset;
     text-align: start;
     text-decoration: underline;
     color: LinkText;
     color: -webkit-link;
     cursor: pointer;
+    align-items: normal;
+    border-style: none;
+    box-sizing: content-box;
+    display: inline;
+    font: inherit;
+    height: auto;
+    padding: 0;
+    perspective-origin: 0 0;
+    text-align: start;
+    text-decoration: underline;
+    transform-origin: 0 0;
+    width: auto;
+    -moz-appearance: none;
+    -webkit-logical-height: 1em; /* Chrome ignores auto, so we have to use this hack to set the correct height  */
+    -webkit-logical-width: auto; /* Chrome ignores auto, but here for completeness */
   }
 </style>
