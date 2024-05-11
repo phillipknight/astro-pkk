@@ -12,8 +12,10 @@ const pageTitle = "About Me";
       <div class="quick-info">
         <div class="profile-photo">
           <img
-            src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/382237964_10225906365979268_1482796169879502037_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=KoD8uiFcx6kQ7kNvgHq4K9Q&_nc_ht=scontent-lga3-1.xx&oh=00_AfB1hSFcM_pQ2LYrqahWkQ_IXq_O0y7lEkXOFQI7jrIGHg&oe=6641E3A2"
+            src="/src/assets/bay-dock.jpg"
+            alt="Phillip smiles into the camera for a selfie in the glow of sunset, appearing in a ballcap and sporting a long bushy beard, standing on a dock in a marina with water in the background"
           />
+
           <!-- TODO <button>change picture</button> -->
         </div>
         <div class="info-basic">
@@ -25,26 +27,105 @@ const pageTitle = "About Me";
       </div>
       <div class="contact-box">
         <h2>Contacting Phil</h2>
-        <ul>
-          <li>
-            <button class="button-as-link" onclick="copyEmailAddress()"
-              >Copy Email to Clipboard</button
-            >
-          </li>
-          <li>
-            <a href="mailto:pkk@phillipkentknight.com">Send Email in App</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/phillipkentknight"
-              >Connect on LinkedIn</a
-            >
-          </li>
-          <li>
-            <a href="https://www.codepen.io/phillipkent"
-              >Collaborate on Codepen</a
-            >
-          </li>
-        </ul>
+        <div class="contact-container">
+          <ul class="contact-links">
+            <li>
+              <div>
+                <button class="button-as-link" onclick="copyEmailAddress()"
+                  >Copy Email to Clipboard</button
+                >
+                <dialog>
+                  <button autofocus>Close</button>
+                  <p>Email address copied - I can't wait to hear from you!</p>
+                </dialog>
+              </div>
+            </li>
+            <li>
+              <a href="mailto:pkk@phillipkentknight.com">Send Email in App</a>
+            </li>
+            <li>
+              <a href="https://www.codepen.io/phillipkent"
+                >Collaborate on Codepen</a
+              >
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/phillipkentknight"
+                >Connect on LinkedIn</a
+              >
+            </li>
+
+            <li>
+              <a href="https://www.facebook.com/phillipkent"
+                >Friend on Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/phillipkent"
+                >Follow on Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="contact-box">
+        <h2>Quick Facts</h2>
+        <div class="fact-container">
+          <div class="facts">
+            <h3>Titles I've held</h3>
+            <ul>
+              <li>Web Developer</li>
+              <li>Product Manager</li>
+              <li>Bearded Wizard</li>
+              <li>Logic Wrangler</li>
+              <li>Digital Producer</li>
+              <li>Webmaster</li>
+              <li>Template Tactician</li>
+              <li>Political Organizing Expert</li>
+              <li>Campaign Technology Specialist</li>
+            </ul>
+          </div>
+          <div class="facts">
+            <h3>Technology I like</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>ActionKit</li>
+              <li>Ghost</li>
+              <li>New/Mode</li>
+              <li>Astro</li>
+            </ul>
+          </div>
+
+          <div class="facts">
+            <h3>Favorite Collaborators</h3>
+            <ul>
+              <li>Campaigners</li>
+              <li>Designers</li>
+              <li>Developers</li>
+            </ul>
+          </div>
+
+          <div class="facts">
+            <h3>Drink</h3>
+            <ul>
+              <li>Coffee</li>
+              <li>Scotch</li>
+            </ul>
+          </div>
+
+          <div class="facts">
+            <h3>Hobbies</h3>
+            <ul>
+              <li>Amateur Radio</li>
+              <li>Baking</li>
+              <li>Cycling</li>
+              <li>Gardening</li>
+              <li>Random Projects</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <div class="area right">
@@ -95,8 +176,10 @@ const pageTitle = "About Me";
     var emailDomain = "phillipkentknight.com";
 
     navigator.clipboard.writeText(`${emailHandle}@${emailDomain}`);
+    alert("Email address copied! ...and I can't wait to hear from you!");
   }
 </script>
+
 <style>
   span.blockspam {
     display: none;
@@ -168,24 +251,65 @@ const pageTitle = "About Me";
     border: 1.5px solid black;
   }
 
+  .contact-container {
+    padding: 1.5rem;
+    background-color: white;
+  }
+  .fact-container {
+    padding: 0.5rem;
+    background-color: white;
+  }
   .contact-box h2 {
     font-size: 1.3125rem;
-  }
-
-  .contact-box > * {
     padding-inline: 1.5rem;
   }
+  .contact-box h3 {
+    font-size: 1rem;
+  }
 
-  .contact-box ul {
+  .contact-box ul.contact-links {
     display: grid;
     grid-template-columns: 1fr 1fr;
     list-style: none;
     list-style-type: none;
     list-style-position: inside;
     gap: 1.5rem;
-    padding: 1.5rem;
+    padding: 0;
 
     background-color: white;
     color: black;
+    & a,
+    button {
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+
+  .contact-box .facts {
+    color: black;
+    background-color: #efefef;
+    padding: 1rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 33% 66%;
+    align-items: start;
+    justify-items: start;
+    &:has(+ *) {
+      margin-block-end: 0.5rem;
+    }
+  }
+
+  .facts > ul {
+    list-style: none;
+    list-style-type: none;
+    list-style-position: inside;
+    padding-inline-end: 0.5rem;
+    padding-inline-start: 0;
+    & li {
+      display: inline;
+    }
+    & li:has(+ li)::after {
+      content: ",";
+    }
   }
 </style>
