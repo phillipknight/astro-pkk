@@ -83,6 +83,7 @@ const pageTitle = "About Me";
               <li>Webmaster</li>
               <li>Template Tactician</li>
               <li>User Advocate</li>
+              <li>Lead Barista</li>
               <li>Political Organizing Expert</li>
               <li>Campaign Technology Specialist</li>
             </ul>
@@ -132,7 +133,9 @@ const pageTitle = "About Me";
     </div>
     <div class="area right">
       <div class="biography wrapper">
-        <h2>Tinkering with technology and trying to make a difference</h2>
+        <p class="extended-network">"Tinkering with technology and trying to make a difference"</p>
+        <h2>My Work</h2>
+
         <p>
           I've spent over a decade helping campaigns and nonprofit organizations
           build and manage web products designed to change the world.
@@ -168,6 +171,29 @@ const pageTitle = "About Me";
           integrating the most powerful and popular toolsets including platforms
           like ActionKit, Ghost, WordPress, NationBuilder, and New/Mode.
         </p>
+
+        <!-- todo  <p><a href="#">Check out my CV</a></p> 
+        <img src="http://i.picasion.com/gl/92/iIck.gif"/> -->
+
+        <div class="friends-list">
+          <div class="friend">
+            <a href="#">Beard Placeholder</a>
+            <img src="https://placebeard.it/200/200"/>
+          </div>
+          <div class="friend">
+            <img src="https://placebeard.it/200/300"/>
+          </div>
+          <div class="friend">
+            <img src="https://placebeard.it/225/200"/>
+          </div>
+          <div class="friend">
+            <img src="https://placebeard.it/300/400"/>
+          </div>
+         
+          
+
+        </div>
+
       </div>
 
 
@@ -315,5 +341,27 @@ const pageTitle = "About Me";
     & li:has(+ li)::after {
       content: ",";
     }
+  }
+
+  .extended-network {
+    border: 1.5px solid;
+    padding: 1.5rem;
+    margin-block-end: 3rem;
+    font-size:  1.3125rem;
+  }
+
+  .biography h2 { 
+    background-color: #efefef;
+    color: black;
+    font-size: 1.6875rem;
+    padding-inline-start: 1.5rem;
+  }
+
+  .friends-list {
+    background: #efefef;
+    display:grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:1.5rem;
+    padding:1.5rem;
   }
 </style>
