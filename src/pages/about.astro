@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import profilepic from '../assets/bay-dock.jpg';
 
 const pageTitle = "About Me";
 ---
@@ -12,7 +13,7 @@ const pageTitle = "About Me";
       <div class="quick-info">
         <div class="profile-photo">
           <img
-            src="/src/assets/bay-dock.jpg"
+            src={profilepic.src}
             alt="Phillip smiles into the camera for a selfie in the glow of sunset, appearing in a ballcap and sporting a long bushy beard, standing on a dock in a marina with water in the background"
           />
 
