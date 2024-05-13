@@ -1,8 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import profilepic from '../assets/bay-dock.jpg';
+import profilepic from "../assets/bay-dock.jpg";
+import profilepic1 from "../assets/crowned-knight.jpeg";
+import profilepic2 from "../assets/coffee-shot.jpg";
+import profilepic3 from "../assets/island-vibes.jpg";
+
+import workPhoto1 from "../assets/center-equality-day-2015.jpg";
+import workPhoto2 from "../assets/phil-wad-2017.png";
+import workPhoto3 from "../assets/na-in-uk-2019.jpg";
+import workPhoto4 from "../assets/clientcon-2019.jpg";
+
 
 const pageTitle = "About Me";
+
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -12,12 +22,12 @@ const pageTitle = "About Me";
     <div class="area left">
       <div class="quick-info">
         <div class="profile-photo">
-          <img
+          <img id="profile-pic"
             src={profilepic.src}
             alt="Phillip smiles into the camera for a selfie in the glow of sunset, appearing in a ballcap and sporting a long bushy beard, standing on a dock in a marina with water in the background"
           />
 
-          <!-- TODO <button>change picture</button> -->
+          <!--  <button id="changeProfilePic" class="button-as-link">[Change profile picture]</button>-->
         </div>
         <div class="info-basic">
           <p><strong>Phil</strong></p>
@@ -32,7 +42,7 @@ const pageTitle = "About Me";
           <ul class="contact-links">
             <li>
               <div>
-                <button class="button-as-link" onclick="copyEmailAddress()"
+                <button id="copyEmailAddress" class="button-as-link" 
                   >Copy Email to Clipboard</button
                 >
                 <dialog>
@@ -180,17 +190,17 @@ const pageTitle = "About Me";
 
         <div class="friends-list">
           <div class="friend">
-            <a href="#">Beard Placeholder</a>
-            <img src="https://placebeard.it/200/200"/>
+            <!-- <a href="#">Beard Placeholder</a> -->
+            <img src={workPhoto1.src} alt=""/>
           </div>
           <div class="friend">
-            <img src="https://placebeard.it/200/300"/>
+            <img src={workPhoto2.src} alt=""/>
           </div>
           <div class="friend">
-            <img src="https://placebeard.it/225/200"/>
+            <img src={workPhoto3.src} alt=""/>
           </div>
           <div class="friend">
-            <img src="https://placebeard.it/300/400"/>
+            <img src={workPhoto4.src} alt=""/>
           </div>
          
           
@@ -203,7 +213,14 @@ const pageTitle = "About Me";
     </div>
   </div>
 </BaseLayout>
-<script is:inline>
+
+
+
+
+
+
+<script>
+  //click-to-copy email address and click handler
   function copyEmailAddress() {
     var emailHandle = "pkk";
     var emailDomain = "phillipkentknight.com";
@@ -211,7 +228,12 @@ const pageTitle = "About Me";
     navigator.clipboard.writeText(`${emailHandle}@${emailDomain}`);
     alert("Email address copied! ...and I can't wait to hear from you!");
   }
+
+  document.getElementById("copyEmailAddress")!.addEventListener("click", copyEmailAddress);
+
 </script>
+
+
 
 <style>
   span.blockspam {
@@ -364,7 +386,7 @@ const pageTitle = "About Me";
     background: #efefef;
     display:grid; 
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap:1.5rem;
+    gap:.5rem;
     padding:1.5rem;
   }
 </style>
