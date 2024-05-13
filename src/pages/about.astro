@@ -382,7 +382,7 @@ const pageTitle = "About Me";
 
   p:has(.glitter-text) {
     text-align: center;
-    margin-inline: auto;
+    transform: rotate(-2deg);
   }
 
   .glitter-text {
@@ -390,7 +390,6 @@ const pageTitle = "About Me";
     background: linear-gradient(magenta, blue);
     background-clip: text;
     color: transparent;
-    background-size: contain;
     text-decoration: none;
     font-size: 5rem;
     font-weight: bold;
@@ -399,9 +398,12 @@ const pageTitle = "About Me";
   @media (prefers-reduced-motion: no-preference) {
     .glitter-text {
       font-family: "Fredoka One";
+      background-image: url(https://i.makeagif.com/media/8-14-2017/CHtVmb.gif);
+      background-size: contain;
       background-image: url(https://i.gifer.com/MKuM.gif);
-      
+
       filter: brightness(150%) drop-shadow(0 0 1.5px white);
+
     }
   }
 </style>
