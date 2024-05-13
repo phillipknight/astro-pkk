@@ -1,18 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import profilepic from "../assets/bay-dock.jpg";
-import profilepic1 from "../assets/crowned-knight.jpeg";
-import profilepic2 from "../assets/coffee-shot.jpg";
-import profilepic3 from "../assets/island-vibes.jpg";
+import "@fontsource/fredoka-one";
+
+// import profilepic1 from "../assets/crowned-knight.jpeg";
+// import profilepic2 from "../assets/coffee-shot.jpg";
+// import profilepic3 from "../assets/island-vibes.jpg";
 
 import workPhoto1 from "../assets/center-equality-day-2015.jpg";
 import workPhoto2 from "../assets/phil-wad-2017.png";
 import workPhoto3 from "../assets/na-in-uk-2019.jpg";
 import workPhoto4 from "../assets/clientcon-2019.jpg";
 
-
 const pageTitle = "About Me";
-
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -22,7 +22,8 @@ const pageTitle = "About Me";
     <div class="area left">
       <div class="quick-info">
         <div class="profile-photo">
-          <img id="profile-pic"
+          <img
+            id="profile-pic"
             src={profilepic.src}
             alt="Phillip smiles into the camera for a selfie in the glow of sunset, appearing in a ballcap and sporting a long bushy beard, standing on a dock in a marina with water in the background"
           />
@@ -42,7 +43,7 @@ const pageTitle = "About Me";
           <ul class="contact-links">
             <li>
               <div>
-                <button id="copyEmailAddress" class="button-as-link" 
+                <button id="copyEmailAddress" class="button-as-link"
                   >Copy Email to Clipboard</button
                 >
                 <dialog>
@@ -146,7 +147,9 @@ const pageTitle = "About Me";
     </div>
     <div class="area right">
       <div class="biography wrapper">
-        <p class="extended-network">"Tinkering with technology and trying to make a difference"</p>
+        <p class="extended-network">
+          "Tinkering with technology and trying to make a difference"
+        </p>
         <h2>My Work</h2>
 
         <p>
@@ -185,39 +188,27 @@ const pageTitle = "About Me";
           like ActionKit, Ghost, WordPress, NationBuilder, and New/Mode.
         </p>
 
-        <!-- todo  <p><a href="#">Check out my CV</a></p> 
-        <img src="http://i.picasion.com/gl/92/iIck.gif"/> -->
+        <p><a class="glitter-text" href="#">Check out my CV</a></p>
 
         <div class="friends-list">
           <div class="friend">
             <!-- <a href="#">Beard Placeholder</a> -->
-            <img src={workPhoto1.src} alt=""/>
+            <img src={workPhoto1.src} alt="" />
           </div>
           <div class="friend">
-            <img src={workPhoto2.src} alt=""/>
+            <img src={workPhoto2.src} alt="" />
           </div>
           <div class="friend">
-            <img src={workPhoto3.src} alt=""/>
+            <img src={workPhoto3.src} alt="" />
           </div>
           <div class="friend">
-            <img src={workPhoto4.src} alt=""/>
+            <img src={workPhoto4.src} alt="" />
           </div>
-         
-          
-
         </div>
-
       </div>
-
-
     </div>
   </div>
 </BaseLayout>
-
-
-
-
-
 
 <script>
   //click-to-copy email address and click handler
@@ -229,11 +220,10 @@ const pageTitle = "About Me";
     alert("Email address copied! ...and I can't wait to hear from you!");
   }
 
-  document.getElementById("copyEmailAddress")!.addEventListener("click", copyEmailAddress);
-
+  document
+    .getElementById("copyEmailAddress")!
+    .addEventListener("click", copyEmailAddress);
 </script>
-
-
 
 <style>
   span.blockspam {
@@ -372,10 +362,10 @@ const pageTitle = "About Me";
     border: 1.5px solid;
     padding: 1.5rem;
     margin-block-end: 3rem;
-    font-size:  1.3125rem;
+    font-size: 1.3125rem;
   }
 
-  .biography h2 { 
+  .biography h2 {
     background-color: #efefef;
     color: black;
     font-size: 1.6875rem;
@@ -384,9 +374,34 @@ const pageTitle = "About Me";
 
   .friends-list {
     background: #efefef;
-    display:grid; 
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap:.5rem;
-    padding:1.5rem;
+    gap: 0.5rem;
+    padding: 1.5rem;
+  }
+
+  p:has(.glitter-text) {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .glitter-text {
+    font-family: "Fredoka One";
+    background: linear-gradient(magenta, blue);
+    background-clip: text;
+    color: transparent;
+    background-size: contain;
+    text-decoration: none;
+    font-size: 5rem;
+    font-weight: bold;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .glitter-text {
+      font-family: "Fredoka One";
+      background-image: url(https://i.gifer.com/MKuM.gif);
+      
+      filter: brightness(150%) drop-shadow(0 0 1.5px white);
+    }
   }
 </style>
