@@ -171,31 +171,28 @@ const pageTitle = "About Me";
         </p>
 
         <p>
-          I work well with campaigners and designers, and I'm happy to
+          Thoughtful about design and keenly focused on users, I collaborate
+          effectively with campaigners and creatives. I'm also happy to
           facilitate collaboration on topics including accessibility, frontend
           code, user experience, and product development.
         </p>
 
         <p>
           I'm continuously learning and expanding my technical skillset both
-          professionally and for fun. I'm comfortable building
-          production-quality CSS, HTML, and JavaScript as well as working with
-          modern frameworks.
+          professionally and for fun. I build production-quality CSS, HTML, and
+          JavaScript as well as working with modern front-end frameworks. 
         </p>
 
         <p>
           Some of my best work has been using, hacking, extending, and
-          integrating the most powerful and popular toolsets including platforms
-          like ActionKit, Ghost, WordPress, NationBuilder, and New/Mode.
+          integrating industry-leading platforms like ActionKit, Ghost,
+          WordPress, NationBuilder, and New/Mode.
         </p>
+
 
         <p><a class="glitter-text" href="/cv">Check out my CV</a></p>
 
-
-
-
-
-<!--
+        <!--
         <h2>Case Studies</h2>
         <div class="friends-list">
           <div class="friend">
@@ -212,31 +209,61 @@ const pageTitle = "About Me";
           </div>
         </div>
       -->
-     
+
         <h2>Comments</h2>
         <div class="comment-feed">
           <ul>
-            <li>    <div class="avatar">
-              
-              <img src={userIcon.src}/> <p>Manager</p>
-            </div>   <p class="comment">"Phil regularly challenges us to think beyond how something looks to how it will work and be used by all of our users."</p>
+            <li>
+              <div class="avatar">
+                <img src={userIcon.src} />
+                <p>Manager</p>
+              </div>
+              <p class="comment">
+                <q
+                  >Phil regularly challenges us to think beyond how something
+                  looks to how it will work and be used by all of our users.</q
+                >
+              </p>
             </li>
-            <li>      <div class="avatar"><img src={userIcon.src}/>
-              <p>Creator</p>
-            </div>     <p class="comment">"He can answer just about any question you could possibly have on digital tech and resolves any problems that come up very quickly!"</p>
+            <li>
+              <div class="avatar">
+                <img src={userIcon.src} />
+                <p>Content Creator</p>
+              </div>
+              <p class="comment">
+                <q
+                  >He can answer just about any question you could possibly have
+                  on digital tech and resolves any problems that come up very
+                  quickly!</q
+                >
+              </p>
             </li>
-            <li>     <div class="avatar"><img src={userIcon.src}/>
-              <p>Campaigner</p>
-            </div>      <p class="comment">"Phil is always ready to help and solve problems. He invariably remains calm, positive and focussed, even in challenging situations. He is a rock in the storm!"</p>
+            <!-- <li>
+              <div class="avatar">
+                <img src={userIcon.src} />
+                <p>Campaigner</p>
+              </div>
+              <p class="comment">
+                <q
+                  >Phil is always ready to help and solve problems. He
+                  invariably remains calm, positive and focussed, even in
+                  challenging situations. He is a rock in the storm!</q>
+              </p>
+            </li> -->
+            <li>
+              <div class="avatar">
+                <img src={userIcon.src} />
+                <p>Designer</p>
+              </div>
+              <p class="comment">
+                <q
+                  >He's always very well-informed and understands all the
+                  intricate details on particular subjects (sometimes it seems
+                  to be all subjects)</q
+                >
+              </p>
             </li>
-            <li>     <div class="avatar"><img src={userIcon.src}/>
-              <p>Designer</p>
-            </div>      <p class="comment">"He's always very well-informed and understands all the intricate details on particular subjects (sometimes it seems to be all subjects)"</p>
-            </li>
-
-
           </ul>
-
         </div>
       </div>
     </div>
@@ -436,21 +463,18 @@ const pageTitle = "About Me";
     }
   }
 
-
   .comment-feed > ul {
-    display: grid; 
+    display: grid;
     gap: 1.5rem;
-    list-style: none; 
-    list-style-type: none; 
-    padding: 0; 
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
     & li {
       display: grid;
       grid-template-columns: 1fr 3fr;
       gap: 1.5rem;
     }
   }
-
-
 
   .comment-feed .avatar {
     display: flex;
@@ -464,6 +488,4 @@ const pageTitle = "About Me";
       background-color: #efefef;
     }
   }
-
-
 </style>
