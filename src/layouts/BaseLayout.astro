@@ -5,6 +5,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SEO } from "astro-seo";
 import "@fontsource/atkinson-hyperlegible";
+import atkinsonHyperlegibleWoff2 from '@fontsource/atkinson-hyperlegible/files/atkinson-hyperlegible-latin-ext-400-normal.woff';
 import "../styles/global.css";
 
 
@@ -22,6 +23,8 @@ const fullPageTitle = pageTitle + " - Phillip Kent Knight";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="preload" as="font" type="font/woff2" href={atkinsonHyperlegibleWoff2} crossorigin/>
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
