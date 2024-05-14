@@ -4,14 +4,13 @@ import profilepic from "../assets/bay-dock.jpg";
 import userIcon from "../icons/user.svg";
 import "@fontsource/fredoka-one";
 
+import chompfriend from "../assets/chompfriend.jpg";
+import pandabearfriend from "../assets/pandabearfriend.jpg";
+
 // import profilepic1 from "../assets/crowned-knight.jpeg";
 // import profilepic2 from "../assets/coffee-shot.jpg";
 // import profilepic3 from "../assets/island-vibes.jpg";
 
-import workPhoto1 from "../assets/center-equality-day-2015.jpg";
-import workPhoto2 from "../assets/phil-wad-2017.png";
-import workPhoto3 from "../assets/na-in-uk-2019.jpg";
-import workPhoto4 from "../assets/clientcon-2019.jpg";
 ---
 
 <BaseLayout
@@ -194,23 +193,19 @@ import workPhoto4 from "../assets/clientcon-2019.jpg";
 
         <p><a class="glitter-text" href="/cv">Check out my CV</a></p>
 
-        <!--
-        <h2>Case Studies</h2>
+       
+        <h2>Phil's Friends</h2>
         <div class="friends-list">
           <div class="friend">
-            <img src={workPhoto1.src} alt="" />
+            <p>Chomp <3</p>
+            <img src={chompfriend.src} alt="" />
           </div>
           <div class="friend">
-            <img src={workPhoto2.src} alt="" />
-          </div>
-          <div class="friend">
-            <img src={workPhoto3.src} alt="" />
-          </div>
-          <div class="friend">
-            <img src={workPhoto4.src} alt="" />
+            <p>Panda Bear</p>
+            <img src={pandabearfriend.src} alt="" />
           </div>
         </div>
-      -->
+  
 
         <h2>Comments</h2>
         <div class="comment-feed">
@@ -438,8 +433,16 @@ import workPhoto4 from "../assets/clientcon-2019.jpg";
     background: #efefef;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 0.5rem;
+    gap: 1.5rem;
     padding: 1.5rem;
+  }
+  .friend {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    justify-items: center;
+    align-items: center;
+
   }
 
   p:has(.glitter-text) {
