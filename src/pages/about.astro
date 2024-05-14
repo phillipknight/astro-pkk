@@ -12,11 +12,14 @@ import workPhoto1 from "../assets/center-equality-day-2015.jpg";
 import workPhoto2 from "../assets/phil-wad-2017.png";
 import workPhoto3 from "../assets/na-in-uk-2019.jpg";
 import workPhoto4 from "../assets/clientcon-2019.jpg";
-
-const pageTitle = "About Me";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout
+  pageTitle="About Me"
+  description="Learn about Phil's work"
+  imageUrl={profilepic.src}
+  imageAlt="Phillip smiles into the camera for a selfie in the glow of sunset, appearing in a ballcap and sporting a long bushy beard, standing on a dock in a marina with water in the background"
+>
   <h1 class="visually-hidden">About Me</h1>
 
   <div class="full-bleed my-space">

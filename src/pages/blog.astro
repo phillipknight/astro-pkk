@@ -3,11 +3,12 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Card from "../components/Card.astro";
 
-const pageTitle = "Blog";
 const allPosts = await getCollection("posts");
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout   pageTitle="Blog"
+description="Latest posts from Phillip Kent Knight"
+>
   <h1>Blog</h1>
   <ul class="blog-cards">
     {
