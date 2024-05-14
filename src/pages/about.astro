@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import profilepic from "../assets/bay-dock.jpg";
+import userIcon from "../icons/user.svg";
 import "@fontsource/fredoka-one";
 
 // import profilepic1 from "../assets/crowned-knight.jpeg";
@@ -214,10 +215,28 @@ const pageTitle = "About Me";
      
         <h2>Comments</h2>
         <div class="comment-feed">
-        <p>"Phil regularly challenges us to think beyond how something looks to how it will work and be used by all of our users."</p>
-        <p>"He can answer just about any question you could possibly have on digital tech and resolves any problems that come up very quickly!"</p>
-        <p>"Phil is always ready to help and solve problems. He invariably remains calm, positive and focussed, even in challenging situations. He is a rock in the storm!"</p>
-        <p>"He's always very well-informed and understands all the intricate details on particular subjects (sometimes it seems to be all subjects)"</p>
+          <ul>
+            <li>    <div class="avatar">
+              
+              <img src={userIcon.src}/> <p>Manager</p>
+            </div>   <p class="comment">"Phil regularly challenges us to think beyond how something looks to how it will work and be used by all of our users."</p>
+            </li>
+            <li>      <div class="avatar"><img src={userIcon.src}/>
+              <p>Creator</p>
+            </div>     <p class="comment">"He can answer just about any question you could possibly have on digital tech and resolves any problems that come up very quickly!"</p>
+            </li>
+            <li>     <div class="avatar"><img src={userIcon.src}/>
+              <p>Campaigner</p>
+            </div>      <p class="comment">"Phil is always ready to help and solve problems. He invariably remains calm, positive and focussed, even in challenging situations. He is a rock in the storm!"</p>
+            </li>
+            <li>     <div class="avatar"><img src={userIcon.src}/>
+              <p>Designer</p>
+            </div>      <p class="comment">"He's always very well-informed and understands all the intricate details on particular subjects (sometimes it seems to be all subjects)"</p>
+            </li>
+
+
+          </ul>
+
         </div>
       </div>
     </div>
@@ -418,9 +437,32 @@ const pageTitle = "About Me";
   }
 
 
-  .comment-feed {
+  .comment-feed > ul {
     display: grid; 
-    gap: 0.5rem;
+    gap: 1.5rem;
+    list-style: none; 
+    list-style-type: none; 
+    padding: 0; 
+    & li {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 1.5rem;
+    }
+  }
+
+
+
+  .comment-feed .avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    & p {
+      text-align: center;
+    }
+    & img {
+      padding: 1rem;
+      background-color: #efefef;
+    }
   }
 
 
