@@ -190,9 +190,14 @@ const pageTitle = "About Me";
 
         <p><a class="glitter-text" href="/cv">Check out my CV</a></p>
 
+
+
+
+
+<!--
+        <h2>Case Studies</h2>
         <div class="friends-list">
           <div class="friend">
-            <!-- <a href="#">Beard Placeholder</a> -->
             <img src={workPhoto1.src} alt="" />
           </div>
           <div class="friend">
@@ -204,6 +209,15 @@ const pageTitle = "About Me";
           <div class="friend">
             <img src={workPhoto4.src} alt="" />
           </div>
+        </div>
+      -->
+     
+        <h2>Comments</h2>
+        <div class="comment-feed">
+        <p>"Phil regularly challenges us to think beyond how something looks to how it will work and be used by all of our users."</p>
+        <p>"He can answer just about any question you could possibly have on digital tech and resolves any problems that come up very quickly!"</p>
+        <p>"Phil is always ready to help and solve problems. He invariably remains calm, positive and focussed, even in challenging situations. He is a rock in the storm!"</p>
+        <p>"He's always very well-informed and understands all the intricate details on particular subjects (sometimes it seems to be all subjects)"</p>
         </div>
       </div>
     </div>
@@ -402,4 +416,12 @@ const pageTitle = "About Me";
       filter: brightness(150%) drop-shadow(0 0 1px white);
     }
   }
+
+
+  .comment-feed {
+    display: grid; 
+    gap: 0.5rem;
+  }
+
+
 </style>
