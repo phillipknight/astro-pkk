@@ -11,8 +11,8 @@ import "../styles/global.css";
 interface Props {
   pageTitle: string;
   description: string;
-  imageUrl: string;
-  imageAlt: string;
+  imageUrl?: string;
+  imageAlt?: string;
 }
 
 const { pageTitle = "Hello", description = "From the desk of Phillip Kent Knight", imageUrl = "", imageAlt=""  } = Astro.props;
@@ -57,7 +57,7 @@ const fullPageTitle = pageTitle + " - Phillip Kent Knight";
   <body>
     <Header />
 
-    <main class="wrapper">
+    <main id="#main" class="wrapper">
       <slot />
     </main>
     <Footer />

@@ -8,15 +8,16 @@ const { frontmatter } = Astro.props;
 ---
 
 <BlogLayout pageData={frontmatter}>
-  <header class="full-bleed wrapper">
-    <h1>{frontmatter.title}</h1>
-    <FormattedDate date={frontmatter.pubDate} />
-  </header>
+  <article class="wrapper">
+    <header class="full-bleed wrapper">
+      <h1>{frontmatter.title}</h1>
+      <FormattedDate date={frontmatter.pubDate} />
+    </header>
 
-  <slot />
-  
-  <section>
-    <Tags tags={frontmatter.tags} />
-  </section>
+    <slot />
+
+    <footer>
+      <Tags tags={frontmatter.tags} />
+    </footer>
+  </article>
 </BlogLayout>
-
