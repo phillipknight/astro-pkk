@@ -4,13 +4,15 @@ import profilepic from "../assets/bay-dock.jpg";
 import userIcon from "../icons/user.svg";
 import "@fontsource/fredoka-one";
 
+import glitterGif from "../assets/glittergif.gif"
 import chompfriend from "../assets/chompfriend.jpg";
 import pandabearfriend from "../assets/pandabearfriend.jpg";
+
+const glitterBackground = "url(" + glitterGif.src + ")";
 
 // import profilepic1 from "../assets/crowned-knight.jpeg";
 // import profilepic2 from "../assets/coffee-shot.jpg";
 // import profilepic3 from "../assets/island-vibes.jpg";
-
 ---
 
 <BaseLayout
@@ -193,7 +195,8 @@ import pandabearfriend from "../assets/pandabearfriend.jpg";
 
         <p><a class="glitter-text" href="/cv">Check out my CV</a></p>
 
-       
+
+
         <h2>Phil's Friends</h2>
         <div class="friends-list">
           <div class="friend">
@@ -205,14 +208,13 @@ import pandabearfriend from "../assets/pandabearfriend.jpg";
             <img src={pandabearfriend.src} alt="" />
           </div>
         </div>
-  
 
         <h2>Comments</h2>
         <div class="comment-feed">
           <ul>
             <li>
               <div class="avatar">
-                <img src={userIcon.src} alt=""/>
+                <img src={userIcon.src} alt="" />
                 <p>Manager</p>
               </div>
               <p class="comment">
@@ -224,7 +226,7 @@ import pandabearfriend from "../assets/pandabearfriend.jpg";
             </li>
             <li>
               <div class="avatar">
-                <img src={userIcon.src} alt=""/>
+                <img src={userIcon.src} alt="" />
                 <p>Content Creator</p>
               </div>
               <p class="comment">
@@ -249,7 +251,7 @@ import pandabearfriend from "../assets/pandabearfriend.jpg";
             </li> -->
             <li>
               <div class="avatar">
-                <img src={userIcon.src} alt=""/>
+                <img src={userIcon.src} alt="" />
                 <p>Designer</p>
               </div>
               <p class="comment">
@@ -282,7 +284,7 @@ import pandabearfriend from "../assets/pandabearfriend.jpg";
     .addEventListener("click", copyEmailAddress);
 </script>
 
-<style>
+<style define:vars={{ glitterBackground }}>
   span.blockspam {
     display: none;
   }
@@ -442,7 +444,6 @@ import pandabearfriend from "../assets/pandabearfriend.jpg";
     font-weight: bold;
     justify-items: center;
     align-items: center;
-
   }
 
   p:has(.glitter-text) {
@@ -451,20 +452,31 @@ import pandabearfriend from "../assets/pandabearfriend.jpg";
 
   .glitter-text {
     font-family: "Fredoka One";
-    background: linear-gradient(magenta, blue);
-    background-clip: text;
-    color: transparent;
-    text-decoration: none;
-    font-size: 5rem;
+    color: white;
     font-weight: bold;
+    -webkit-text-stroke: 1.5px black;
+    text-shadow: 3px 4px 0px black;
+    font-size: 4rem;
   }
 
-  @media (prefers-reduced-motion: no-preference) {
+  @supports (background-clip: text) {
     .glitter-text {
       font-family: "Fredoka One";
-      background-size: cover;
-      background-image: url(https://64.media.tumblr.com/fa16a486b6588726ab76523ed830ae48/3e25cdb10e230574-19/s500x750/de8d3d50721f5f6b9ab38d50ee8513969354c892.gif);
-      filter: brightness(150%) drop-shadow(0 0 1px white);
+      background: linear-gradient(magenta, blue);
+      background-clip: text;
+      color: transparent;
+      text-decoration: none;
+      font-weight: bold;
+      -webkit-text-stroke: 0;
+    text-shadow: none;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .glitter-text {
+        background-size: cover;
+        background-image:var(--glitterBackground);
+        filter: brightness(150%) drop-shadow(0 0 1px white);
+      }
     }
   }
 
