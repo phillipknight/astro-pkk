@@ -27,7 +27,7 @@ const glitterBackground = "url(" + glitterGif.src + ")";
     <div class="area left">
       <div class="quick-info">
         <div class="profile-photo">
-          <img
+          <img width="960" height="941"
             id="profile-pic"
             src={profilepic.src}
             alt="Phillip smiles into the camera for a selfie in the glow of sunset, appearing in a ballcap and sporting a long bushy beard, standing on a dock in a marina with water in the background"
@@ -343,6 +343,10 @@ const glitterBackground = "url(" + glitterGif.src + ")";
   .quick-info .profile-photo {
     flex-basis: 24ch;
   }
+  .profile-photo > img {
+    max-width: 100%; 
+    height: auto;
+  }
 
   .info-basic {
     flex: 1;
@@ -444,6 +448,13 @@ const glitterBackground = "url(" + glitterGif.src + ")";
     font-weight: bold;
     justify-items: center;
     align-items: center;
+  }
+
+  .friend > img {
+    width: 168px; 
+    height: 300px; 
+    max-width: 100%; 
+    height: auto; 
   }
 
   p:has(.glitter-text) {
