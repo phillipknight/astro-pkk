@@ -4,7 +4,7 @@ import profilepic from "../assets/bay-dock.jpg";
 import userIcon from "../icons/user.svg";
 import "@fontsource/fredoka-one";
 
-import glitterGif from "../assets/glittergif.gif"
+import glitterGif from "../assets/glittergif.gif";
 import chompfriend from "../assets/chompfriend.jpg";
 import pandabearfriend from "../assets/pandabearfriend.jpg";
 
@@ -27,7 +27,9 @@ const glitterBackground = "url(" + glitterGif.src + ")";
     <div class="area left">
       <div class="quick-info">
         <div class="profile-photo">
-          <img width="960" height="941"
+          <img
+            width="960"
+            height="941"
             id="profile-pic"
             src={profilepic.src}
             alt="Phillip smiles into the camera for a selfie in the glow of sunset, appearing in a ballcap and sporting a long bushy beard, standing on a dock in a marina with water in the background"
@@ -71,7 +73,7 @@ const glitterBackground = "url(" + glitterGif.src + ")";
               >
             </li>
 
-<!--            <li>
+            <!--            <li>
               <a href="https://www.facebook.com/phillipkent"
                 >Friend on Facebook</a
               >
@@ -160,45 +162,27 @@ const glitterBackground = "url(" + glitterGif.src + ")";
         <h2>My Work</h2>
 
         <p>
-          I've spent over a decade helping campaigns and nonprofit organizations
-          build and manage web products designed to change the world.
+          I have a background in organizing, extensive tech skills, and over a
+          decade of experience building digital products designed to make a
+          difference.
         </p>
 
         <p>
-          Combining experience in campaigns with expertise in technology, I help
-          teams bridge the gaps between creators, campaigners, developers, and
-          stakeholders.
+          I write production-quality code in HTML, CSS, and Javascript, as well
+          as working with modern front-end frameworks. I collaborate with
+          content creators, campaigners, designers, developers, and stakeholders
+          to create compelling experiences with maximum impact.
         </p>
 
         <p>
-          My early career included front-line field organizing, traditional
-          communications, and campaign strategy. Now, my specialty is bringing
-          this knowledge into the digital products I build.
-        </p>
-
-        <p>
-          Thoughtful about design and keenly focused on users, I collaborate
-          effectively with campaigners and creatives. I'm also happy to
-          facilitate collaboration on topics including accessibility, frontend
-          code, user experience, and product development.
-        </p>
-
-        <p>
-          I'm continuously learning and expanding my technical skillset both
-          professionally and for fun. I build production-quality CSS, HTML, and
-          JavaScript as well as working with modern front-end frameworks.
-        </p>
-
-        <p>
-          Some of my best work has been using, hacking, extending, and
-          integrating industry-leading platforms like ActionKit, Ghost,
+          My work has been used by millions of people taking action around the world. Some of my best work has included integrating, extending,
+          and hacking industry-leading platforms like ActionKit, Ghost,
           WordPress, NationBuilder, and New/Mode.
         </p>
 
         <p><a class="glitter-text" href="/cv">Check out my CV</a></p>
 
-
-<!--
+        <!--
         <h2>Phil's Friends</h2>
         <div class="friends-list">
           <div class="friend">
@@ -346,7 +330,7 @@ const glitterBackground = "url(" + glitterGif.src + ")";
     flex-basis: 24ch;
   }
   .profile-photo > img {
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
   }
 
@@ -453,10 +437,10 @@ const glitterBackground = "url(" + glitterGif.src + ")";
   }
 
   .friend > img {
-    width: 168px; 
-    height: 300px; 
-    max-width: 100%; 
-    height: auto; 
+    width: 168px;
+    height: 300px;
+    max-width: 100%;
+    height: auto;
   }
 
   p:has(.glitter-text) {
@@ -481,13 +465,13 @@ const glitterBackground = "url(" + glitterGif.src + ")";
       text-decoration: none;
       font-weight: bold;
       -webkit-text-stroke: 0;
-    text-shadow: none;
+      text-shadow: none;
     }
 
     @media (prefers-reduced-motion: no-preference) {
       .glitter-text {
         background-size: cover;
-        background-image:var(--glitterBackground);
+        background-image: var(--glitterBackground);
         filter: brightness(150%) drop-shadow(0 0 1px white);
       }
     }
