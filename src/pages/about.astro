@@ -3,12 +3,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import profilepic from "../assets/bay-dock.jpg";
 import userIcon from "../icons/user.svg";
 import "@fontsource/fredoka-one";
+import Icon from "../components/Icon.astro";
 
-import glitterGif from "../assets/glittergif.gif"
+import glitterGif from "../assets/glittergif.gif";
 import chompfriend from "../assets/chompfriend.jpg";
 import pandabearfriend from "../assets/pandabearfriend.jpg";
 
 const glitterBackground = "url(" + glitterGif.src + ")";
+
+import CodePen from "../icons/codepen.svg";
 
 // import profilepic1 from "../assets/crowned-knight.jpeg";
 // import profilepic2 from "../assets/coffee-shot.jpg";
@@ -27,7 +30,9 @@ const glitterBackground = "url(" + glitterGif.src + ")";
     <div class="area left">
       <div class="quick-info">
         <div class="profile-photo">
-          <img width="960" height="941"
+          <img
+            width="960"
+            height="941"
             id="profile-pic"
             src={profilepic.src}
             alt="Phillip smiles into the camera for a selfie in the glow of sunset, appearing in a ballcap and sporting a long bushy beard, standing on a dock in a marina with water in the background"
@@ -51,27 +56,22 @@ const glitterBackground = "url(" + glitterGif.src + ")";
                 <button id="copyEmailAddress" class="button-as-link"
                   >Copy Email to Clipboard</button
                 >
-                <dialog>
-                  <button autofocus>Close</button>
-                  <p>Email address copied - I can't wait to hear from you!</p>
-                </dialog>
               </div>
             </li>
             <li>
               <a href="mailto:pkk@phillipkentknight.com">Send Email in App</a>
             </li>
             <li>
-              <a href="https://www.codepen.io/phillipkent"
-                >Collaborate on Codepen</a
-              >
+              <a href="https://www.codepen.io/phillipkent">
+                  <Icon icon="codepen" /> Collaborate on Codepen</a>
             </li>
             <li>
               <a href="https://www.linkedin.com/in/phillipkentknight"
-                >Connect on LinkedIn</a
+                ><Icon icon="linkedin" /> Connect on LinkedIn</a
               >
             </li>
 
-<!--            <li>
+            <!--            <li>
               <a href="https://www.facebook.com/phillipkent"
                 >Friend on Facebook</a
               >
@@ -197,8 +197,7 @@ const glitterBackground = "url(" + glitterGif.src + ")";
 
         <p><a class="glitter-text" href="/cv">Check out my CV</a></p>
 
-
-<!--
+        <!--
         <h2>Phil's Friends</h2>
         <div class="friends-list">
           <div class="friend">
@@ -291,6 +290,8 @@ const glitterBackground = "url(" + glitterGif.src + ")";
     display: none;
   }
 
+  
+
   .button-as-link {
     border: 0;
     background: 0;
@@ -346,7 +347,7 @@ const glitterBackground = "url(" + glitterGif.src + ")";
     flex-basis: 24ch;
   }
   .profile-photo > img {
-    max-width: 100%; 
+    max-width: 100%;
     height: auto;
   }
 
@@ -388,12 +389,15 @@ const glitterBackground = "url(" + glitterGif.src + ")";
 
     background-color: white;
     color: black;
+
     & a,
     button {
+      display: inline;
       text-decoration: none;
       font-weight: bold;
     }
   }
+ 
 
   .contact-box .facts {
     color: black;
@@ -453,10 +457,10 @@ const glitterBackground = "url(" + glitterGif.src + ")";
   }
 
   .friend > img {
-    width: 168px; 
-    height: 300px; 
-    max-width: 100%; 
-    height: auto; 
+    width: 168px;
+    height: 300px;
+    max-width: 100%;
+    height: auto;
   }
 
   p:has(.glitter-text) {
@@ -481,13 +485,13 @@ const glitterBackground = "url(" + glitterGif.src + ")";
       text-decoration: none;
       font-weight: bold;
       -webkit-text-stroke: 0;
-    text-shadow: none;
+      text-shadow: none;
     }
 
     @media (prefers-reduced-motion: no-preference) {
       .glitter-text {
         background-size: cover;
-        background-image:var(--glitterBackground);
+        background-image: var(--glitterBackground);
         filter: brightness(150%) drop-shadow(0 0 1px white);
       }
     }
