@@ -54,12 +54,12 @@ import CodePen from "../icons/codepen.svg";
             <li>
               <div>
                 <button id="copyEmailAddress" class="button-as-link"
-                  >Copy Email to Clipboard</button
+                  ><Icon icon="copy" /> Copy Email to Clipboard</button
                 >
               </div>
             </li>
             <li>
-              <a href="mailto:pkk@phillipkentknight.com">Send Email in App</a>
+              <a href="mailto:pkk@phillipkentknight.com"><Icon icon="email" /> Send Email in App</a>
             </li>
             <li>
               <a href="https://www.codepen.io/phillipkent">
@@ -397,6 +397,16 @@ import CodePen from "../icons/codepen.svg";
       font-weight: bold;
     }
   }
+ .contact-links a, .contact-links button{
+  display: block;
+ 
+& > :global(svg) {
+  display: inline;
+  vertical-align: middle;
+  width: 1lh;
+  height: 1lh;
+  }
+ } 
  
 
   .contact-box .facts {
