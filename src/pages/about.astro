@@ -1,13 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import profilepic from "../assets/bay-dock.jpg";
 import userIcon from "../icons/user.svg";
 import "@fontsource/fredoka-one";
 
 import glitterGif from "../assets/glittergif.gif";
-import chompfriend from "../assets/chompfriend.jpg";
-import pandabearfriend from "../assets/pandabearfriend.jpg";
+import chompfriend from "../assets/chompcutout-ps.png";
+import pandabearfriend from "../assets/pandacutout-ps.png";
 
 const glitterBackground = "url(" + glitterGif.src + ")";
 
@@ -73,19 +73,6 @@ const glitterBackground = "url(" + glitterGif.src + ")";
                 >Connect on LinkedIn</a
               >
             </li>
-
-            <!--            <li>
-              <a href="https://www.facebook.com/phillipkent"
-                >Friend on Facebook</a
-              >
-            </li>
-            <li>
-              <a href="https://www.instagram.com/phillipkent"
-                >Follow on Instagram</a
-              >
-            </li>
-
-          -->
           </ul>
         </div>
       </div>
@@ -163,22 +150,33 @@ const glitterBackground = "url(" + glitterGif.src + ")";
 
         <h2 class="visually-hidden">My Blurb</h2>
         <p>
-          Friendly, nerdy, and bearded. I’m originally from L.A. but totally at
-          home in DC. I enjoy cycling, coffee, amateur radio, an assortment of random curiosity, and playing with a couple of really cool cats.
+          Friendly, nerdy, and bearded. Originally from L.A. but totally at home
+          in DC. I build kick-ass tech for good causes and campaigns. My other
+          interests include cycling, amateur radio, drinking coffee, listening
+          to podcasts, watching airplanes, diving down random internet rabbit
+          holes, and playing with two awesome cats.
         </p>
-        <div class="cats">
-          
-          <div class="cat">
-            <Image src={chompfriend} alt="A grey kittycat stands with paws close together and faces the camera" />
-            <p>Chomp</p>
-            </div>
-            <div class="cat">
-              <Image src={pandabearfriend} alt="A floofy white cat with black spots, pink ears and a pink snoot, looks off to the side of the camera" />
-              <p>Panda Bear</p>
-            </div>
-          </div>
-        
 
+        <div class="cats">
+          <figure class="cat">
+            <Image
+              src={pandabearfriend}
+              alt="A floofy white cat with black spots, pink ears and a pink snoot, his mouth is agape as the photo snaps while he meows"
+            />
+            <figcaption>
+              <p>Panda Bear 🐼</p>
+            </figcaption>
+          </figure>
+          <figure class="cat">
+            <Image
+              src={chompfriend}
+              alt="A grey kittycat stands with paws close together and faces the camera"
+            />
+            <figcaption>
+              <p>Chomp 👑</p>
+            </figcaption>
+          </figure>
+        </div>
 
         <h2>My Work</h2>
 
@@ -204,19 +202,6 @@ const glitterBackground = "url(" + glitterGif.src + ")";
 
         <p><a class="glitter-text" href="/cv">Check out my CV</a></p>
 
-        <!--
-        <h2>Phil's Friends</h2>
-        <div class="friends-list">
-          <div class="friend">
-            <p>Chomp <3</p>
-            <img src={chompfriend.src} alt="" />
-          </div>
-          <div class="friend">
-            <p>Panda Bear</p>
-            <img src={pandabearfriend.src} alt="" />
-          </div>
-        </div>
-      -->
         <h2>Comments</h2>
         <div class="comment-feed">
           <ul>
@@ -445,14 +430,23 @@ const glitterBackground = "url(" + glitterGif.src + ")";
     padding-inline-start: 1.5rem;
   }
   .cats {
-    display: flex; 
-    gap: 1.5rem;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: end;
+    margin-block-end: 3rem;
   }
   .cat {
-    display: flex; 
-    flex-direction:column;
-    align-items:center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 15rem;
+    & img {
+      cursor:
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>💖</text></svg>")
+          16 0,
+        auto; /*!emojicursor.app*/
+    }
   }
   .friends-list {
     background: #efefef;
