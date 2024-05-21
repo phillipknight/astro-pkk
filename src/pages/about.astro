@@ -165,15 +165,20 @@ const glitterBackground = "url(" + glitterGif.src + ")";
             />
             <figcaption>
               <p><strong>Panda Bear 🐼</strong></p>
+              <p>Occupation: Bag Inspector</p>
+              <p>Birthplace: Annapolis, MD</p>
             </figcaption>
           </figure>
           <figure class="cat">
             <Image
               src={chompfriend}
-              alt="A grey kittycat stands with paws close together and faces the camera"
+              alt="A grey kittycat stands politely with paws close together and faces the camera"
             />
             <figcaption>
               <p><strong>Chomp 👑</strong></p>
+              <p>Occupation: Queen</p>
+              <p>Birthplace: Los Angeles, CA</p>
+
             </figcaption>
           </figure>
         </div>
@@ -432,6 +437,7 @@ const glitterBackground = "url(" + glitterGif.src + ")";
   .cats {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
     justify-items: center;
     align-items: end;
     margin-block-end: 3rem;
