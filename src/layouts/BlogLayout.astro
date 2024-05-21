@@ -9,7 +9,8 @@ import "../styles/global.css";
 
 const { pageData } = Astro.props;
 
-const imageLink = Astro.url + pageData.image.url.src;
+const imageLink = Astro.url.origin + pageData.image.url.src;
+// const imageLink = new URL(pageData.image.url.src, Astro.url.origin);
 ---
 
 <html lang="en">
