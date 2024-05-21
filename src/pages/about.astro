@@ -51,26 +51,23 @@ import CodePen from "../icons/codepen.svg";
       <div class="contact-box">
         <h2>Contacting Phil</h2>
         <div class="contact-container">
-          <ul class="contact-links">
-            <li>
-              <div>
-                <button id="copyEmailAddress" class="button-as-link"
-                  ><Icon icon="copy" /> Copy Email to Clipboard</button
-                >
-              </div>
-            </li>
-            <li>
-              <a href="mailto:pkk@phillipkentknight.com"><Icon icon="email" /> Send Email in App</a>
-            </li>
-            <li>
-              <a href="https://www.codepen.io/phillipkent">
-                  <Icon icon="codepen" /> Collaborate on Codepen</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/phillipkentknight"
-                ><Icon icon="linkedin" /> Connect on LinkedIn</a>
-            </li>
-          </ul>
+          <div class="contact-links">
+            <button id="copyEmailAddress" class="button-as-link"
+              ><Icon icon="copy" /> Copy Email to Clipboard</button
+            >
+
+            <a href="mailto:pkk@phillipkentknight.com"
+              ><Icon class="contactlink" icon="email" /> Send Email in App</a
+            >
+
+            <a href="https://www.codepen.io/phillipkent">
+              <Icon icon="codepen" /> Collaborate on Codepen</a
+            >
+
+            <a href="https://www.linkedin.com/in/phillipkentknight"
+              ><Icon icon="linkedin" /> Connect on LinkedIn</a
+            >
+          </div>
         </div>
       </div>
 
@@ -147,11 +144,11 @@ import CodePen from "../icons/codepen.svg";
 
         <h2 class="visually-hidden">My Blurb</h2>
         <p>
-          Friendly, nerdy, and bearded. Originally from L.A., but totally at home
-          in DC. I build kick-ass tech for good causes and campaigns. My other
-          interests include cycling, amateur radio, drinking coffee, listening
-          to podcasts, watching airplanes, diving down random internet rabbit
-          holes, and playing with two awesome cats.
+          Friendly, nerdy, and bearded. Originally from L.A., but totally at
+          home in DC. I build kick-ass tech for good causes and campaigns. My
+          other interests include cycling, amateur radio, drinking coffee,
+          listening to podcasts, watching airplanes, diving down random internet
+          rabbit holes, and playing with two awesome cats.
         </p>
 
         <div class="cats">
@@ -160,7 +157,7 @@ import CodePen from "../icons/codepen.svg";
               src={pandabearfriend}
               alt="A floofy white cat with black spots, pink ears and a pink snoot, his mouth is agape as the photo snaps while he meows"
             />
-            <figcaption> 
+            <figcaption>
               <p><strong>Panda Bear 🐼</strong></p>
               <p>Job: Bag Inspector</p>
               <p>Place of Birth: Annapolis, MD</p>
@@ -175,7 +172,6 @@ import CodePen from "../icons/codepen.svg";
               <p><strong>Chomp 👑</strong></p>
               <p>Job: Queen</p>
               <p>Place of Birth: Los Angeles, CA</p>
-
             </figcaption>
           </figure>
         </div>
@@ -284,8 +280,6 @@ import CodePen from "../icons/codepen.svg";
     display: none;
   }
 
-  
-
   .button-as-link {
     border: 0;
     background: 0;
@@ -304,8 +298,9 @@ import CodePen from "../icons/codepen.svg";
     perspective-origin: 0 0;
     transform-origin: 0 0;
     width: auto;
+    appearance: none;
     -moz-appearance: none;
-    -webkit-logical-height: 1em; /* Chrome ignores auto, so we have to use this hack to set the correct height  */
+    -webkit-logical-height: auto; 
     -webkit-logical-width: auto; /* Chrome ignores auto, but here for completeness */
   }
 
@@ -372,38 +367,27 @@ import CodePen from "../icons/codepen.svg";
     font-size: 1rem;
   }
 
-  .contact-box ul.contact-links {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    list-style: none;
-    list-style-type: none;
-    list-style-position: inside;
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
-    padding: 0;
-
-    background-color: white;
-    color: black;
-
-    & a,
-    button {
-      display: inline;
-      text-decoration: none;
-      font-weight: bold;
-      height: 100%;
-      width: 100%;
-    }
   }
- .contact-links a, .contact-links button{
-  display: block;
- 
-& > :global(svg) {
-  display: inline;
-  vertical-align: middle;
-  width: 1lh;
-  height: 1lh;
+
+  .contact-links > * {
+    flex: 1;
+    flex-basis: 15ch;
+    gap: 0.75rem;
   }
- } 
- 
+  .contact-links a,
+  .contact-links button {
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-items: center;
+    font-weight: bold; 
+  }
+
 
   .contact-box .facts {
     color: black;
