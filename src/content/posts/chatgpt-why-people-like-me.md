@@ -3,7 +3,7 @@ title: 'I asked ChatGPT to tell me why people like working with me'
 pubDate: 2024-02-27
 description: "It's difficult for me to think of myself as a product, but that's really what job seeking is. In this article, I describe how I tried using AI to analyze quotes from professional feedback as if they were Amazon customer reviews - for the product that is me."
 image:
-    url: 'https://media.licdn.com/dms/image/D4D12AQH-WTrVLCtMRA/article-cover_image-shrink_720_1280/0/1709047417673?e=1715817600&v=beta&t=kgiwNNdWxzwpItBpcWHQpzyVWBTY2ZsBvuephgdOnEM'
+    url: './chatgpt-blog-image-optimized.png'
     alt: 'Photographs of Phillip surrounded by smiling colleagues at social functions' 
 tags: ["AI", "soft skills", "learning in public", "worklife"]
 canonical: "https://www.linkedin.com/pulse/i-asked-chatgpt-tell-me-why-people-like-working-phillip-kent-knight-sjqwf/"

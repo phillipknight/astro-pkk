@@ -24,7 +24,7 @@ const { pageData } = Astro.props;
         basic: {
           title: pageData.title,
           type: "article",
-          image: pageData.image.url,
+          image: pageData.image.url.src,
           url: pageData.canonical,
         },
         optional: {
@@ -44,7 +44,7 @@ const { pageData } = Astro.props;
         site: "@phillipkent",
         creator: "@phillipkent",
         title: pageData.title,
-        image: pageData.image.url,
+        image: pageData.image.url.src,
         imageAlt: pageData.image.alt,
         description: pageData.description,
       }}
