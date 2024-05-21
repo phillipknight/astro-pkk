@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import InfoBox from "../layouts/InfoBox.astro";
 import { Image } from "astro:assets";
 import profilepic from "../assets/bay-dock.jpg";
 import userIcon from "../icons/user.svg";
@@ -11,7 +12,6 @@ import chompfriend from "../assets/chompcutout-ps.png";
 import pandabearfriend from "../assets/pandacutout-ps.png";
 
 const glitterBackground = "url(" + glitterGif.src + ")";
-
 ---
 
 <BaseLayout
@@ -43,7 +43,7 @@ const glitterBackground = "url(" + glitterGif.src + ")";
           <p>United States</p>
         </div>
       </div>
-      <div class="contact-box">
+      <InfoBox>
         <h2>Contacting Phil</h2>
         <div class="contact-container">
           <div class="contact-links">
@@ -64,9 +64,9 @@ const glitterBackground = "url(" + glitterGif.src + ")";
             >
           </div>
         </div>
-      </div>
+      </InfoBox>
 
-      <div class="contact-box">
+      <InfoBox>
         <h2>Quick Facts</h2>
         <div class="fact-container">
           <div class="facts">
@@ -129,7 +129,7 @@ const glitterBackground = "url(" + glitterGif.src + ")";
             </ul>
           </div>
         </div>
-      </div>
+      </InfoBox>
     </div>
     <div class="area right">
       <div class="biography wrapper">
@@ -340,12 +340,6 @@ const glitterBackground = "url(" + glitterGif.src + ")";
     flex-basis: max-content;
   }
 
-  .contact-box {
-    background-color: black;
-    color: white;
-    border: 1.5px solid black;
-  }
-
   .contact-container {
     padding: 1.5rem;
     background-color: white;
@@ -353,13 +347,6 @@ const glitterBackground = "url(" + glitterGif.src + ")";
   .fact-container {
     padding: 0.5rem;
     background-color: white;
-  }
-  .contact-box h2 {
-    font-size: 1.3125rem;
-    padding-inline: 1.5rem;
-  }
-  .contact-box h3 {
-    font-size: 1rem;
   }
 
   .contact-links {
@@ -383,7 +370,7 @@ const glitterBackground = "url(" + glitterGif.src + ")";
     font-weight: bold;
   }
 
-  .contact-box .facts {
+  .facts {
     color: black;
     background-color: #efefef;
     padding: 1rem;
