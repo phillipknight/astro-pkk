@@ -8,6 +8,8 @@ import "@fontsource/atkinson-hyperlegible";
 import "../styles/global.css";
 
 const { pageData } = Astro.props;
+
+const imageLink = Astro.url + pageData.image.url.src;
 ---
 
 <html lang="en">
@@ -24,7 +26,7 @@ const { pageData } = Astro.props;
         basic: {
           title: pageData.title,
           type: "article",
-          image: pageData.image.url.src,
+          image: imageLink,
           url: pageData.canonical,
         },
         optional: {
@@ -44,7 +46,7 @@ const { pageData } = Astro.props;
         site: "@phillipkent",
         creator: "@phillipkent",
         title: pageData.title,
-        image: pageData.image.url.src,
+        image: imageLink,
         imageAlt: pageData.image.alt,
         description: pageData.description,
       }}
