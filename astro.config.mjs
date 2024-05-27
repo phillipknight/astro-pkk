@@ -4,6 +4,6 @@ import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "http://www.phillipkentknight.com/",
+  site: "https://www.phillipkentknight.com/",
   integrations: [preact(),]
 });
