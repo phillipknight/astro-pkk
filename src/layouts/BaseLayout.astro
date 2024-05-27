@@ -35,10 +35,10 @@ const imageUrlFull = Astro.url.origin + imageUrl;
       href={atkinsonHyperlegibleWoff2}
       crossorigin
     />
-
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
+    {Astro.url.pathname == "/" && <link rel="me" href="/about/" />}
     <SEO
       title={fullPageTitle}
       description={description}
