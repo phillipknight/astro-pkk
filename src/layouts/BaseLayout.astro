@@ -22,6 +22,7 @@ const {
   imageAlt = "",
 } = Astro.props;
 const fullPageTitle = pageTitle + " - Phillip Kent Knight";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const imageUrlFull = Astro.url.origin + imageUrl;
 ---
 
@@ -41,6 +42,7 @@ const imageUrlFull = Astro.url.origin + imageUrl;
     <SEO
       title={fullPageTitle}
       description={description}
+      canonical={canonicalURL}
       openGraph={{
         basic: {
           title: pageTitle,
