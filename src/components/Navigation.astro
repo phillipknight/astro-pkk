@@ -53,15 +53,20 @@ const pathname = new URL(Astro.request.url).pathname;
   .nav-item {
     display: flex;
     transition: all 0.5s ease-out;
-    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-    border: 2px solid;
+    box-shadow:
+      1px 1px 0px 0px var(--main-color, #000000),
+      2px 2px 0px 0px var(--main-color, #000000),
+      3px 3px 0px 0px var(--main-color, #000000),
+      4px 4px 0px 0px var(--main-color, #000000),
+      5px 5px 0px 0px var(--main-color, #000000);
+    border: 2px solid var(--main-color, #000000);
   }
 
   .nav-item:focus-within {
-    box-shadow: inset 2px 2px 1px #000000bb;
+    box-shadow: inset 2px 2px 1px var(--main-color, #000000bb);
   }
   .nav-item:hover {
-    box-shadow: inset 2px 2px 1px #000000bb;
+    box-shadow: inset 2px 2px 1px var(--main-color, #000000bb);
   }
 
   .nav-link {
